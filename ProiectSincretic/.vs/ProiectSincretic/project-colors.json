@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "649c7d9f-e90a-418d-aa0b-16a21f3b637f": {
+      "ProjectGuid": "649c7d9f-e90a-418d-aa0b-16a21f3b637f",
+      "DisplayName": "ProiectSincretic",
+      "ColorIndex": 0
+    },
+    "3a7b7e52-c55f-4584-9d51-235c5fe467d9": {
+      "ProjectGuid": "3a7b7e52-c55f-4584-9d51-235c5fe467d9",
+      "DisplayName": "Graphical_Interface",
+      "ColorIndex": 1
+    },
+    "ebb37ece-679d-45d1-8c8e-a291ed4d198b": {
+      "ProjectGuid": "ebb37ece-679d-45d1-8c8e-a291ed4d198b",
+      "DisplayName": "Interface",
+      "ColorIndex": 2
+    },
+    "d19ce826-429e-45cf-957a-7953f3027938": {
+      "ProjectGuid": "d19ce826-429e-45cf-957a-7953f3027938",
+      "DisplayName": "Interface",
+      "ColorIndex": 3
+    },
+    "ff779dc9-af7e-4c1c-bdaf-89275c269296": {
+      "ProjectGuid": "ff779dc9-af7e-4c1c-bdaf-89275c269296",
+      "DisplayName": "InterfaceDLL",
+      "ColorIndex": 4
+    }
+  },
+  "NextColorIndex": 5
+}
