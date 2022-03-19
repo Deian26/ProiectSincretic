@@ -118,7 +118,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "Încărcare hartă din fișier";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            
             // 
             // button1
             // 
@@ -129,7 +129,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Generare hartă din fișier";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            
             // 
             // button_GenerareHartaTastatura
             // 

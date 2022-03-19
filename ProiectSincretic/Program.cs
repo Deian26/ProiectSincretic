@@ -8,7 +8,6 @@ namespace ProiectSincretic
         {
             ApplicationConfiguration.Initialize();
 
-
             Application.Run(new Meniu_principal());
         }
     }

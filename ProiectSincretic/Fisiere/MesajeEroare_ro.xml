@@ -1,0 +1,13 @@
+<err>
+	<err M0>
+		<M0 code="EM0_0" message="Eroare nedefinită\n"/>
+	</err M0>
+	
+	<err B1>
+		<B1 code="EB1_0" message="Eroare nedefinită\n"/>
+		<B1 code="EB1_1" message="Eroare casetă text număr de țări\n"/>
+		<B1 code="EB1_2" message="Eroare casetă text nume  țări\n"/>
+		<B1 code="EB1_3" message="Eroare casetă text număr de culori\n"/>
+		<B1 code="EB1_4" message="Eroare casetă text culori\n"/>
+	</err B1>
+</err>
