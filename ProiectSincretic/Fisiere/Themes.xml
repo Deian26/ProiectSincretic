@@ -1,0 +1,31 @@
+<Themes>
+	<themes>
+		<DEFAULT>Default</DEFAULT>
+		<DARK>Dark</DARK>
+		<RAINBOW>Rainbow</RAINBOW>
+	</themes>
+
+	<DEFAULT background_colour="WhiteSmoke" title_pts="14" pts="12">
+		<Label ForeColor="Black" BackColor="WhiteSmoke" Font="Consolas"></Label>
+		<Button ForeColor="Black" BackColor="WhiteSmoke" Font="Consolas" FlatStyle="2" FlatAppearance_BorderSize="1" FlatAppearance_BorderColor="Black"></Button>
+		<GroupBox ForeColor="Black" BackColor="WhiteSmoke" Font="Consolas"></GroupBox>
+		<ListBox ForeColor="Black" BackColor="WhiteSmoke" Font="Consolas"></ListBox>
+		<ComboBox ForeColor="Black" BackColor="WhiteSmoke" Font="Consolas"></ComboBox>
+	</DEFAULT>
+	
+	<DARK background_colour="DimGray" title_pts="14" pts="12">
+		<Label ForeColor="White" BackColor="DimGray" Font="Consolas"></Label>
+		<Button ForeColor="White" BackColor="DimGray" Font="Consolas" FlatStyle="0" FlatAppearance_BorderSize="1" FlatAppearance_BorderColor="Silver"></Button>
+		<GroupBox ForeColor="White" BackColor="DimGray" Font="Consolas"></GroupBox>
+		<ListBox ForeColor="White" BackColor="DimGray" Font="Consolas"></ListBox>
+		<ComboBox ForeColor="White" BackColor="DimGray" Font="Consolas"></ComboBox>
+	</DARK>
+	
+	<RAINBOW background_colour="LightGreen" title_pts="14" pts="12">
+		<Label ForeColor="Blue" BackColor="Yellow" Font="Comic Sans MS"></Label>
+		<Button ForeColor="DarkGreen" BackColor="Orange" Font="Comic Sans MS" FlatStyle="1" FlatAppearance_Border="2" FlatAppearance_BorderColor="Violet"></Button>
+		<GroupBox ForeColor="Red" BackColor="Yellow" Font="Comic Sans MS"></GroupBox>
+		<ListBox ForeColor="Purple" BackColor="Yellow" Font="Comic Sans MS"></ListBox>
+		<ComboBox ForeColor="Yellow" BackColor="Blue" Font="Comic Sans MS"></ComboBox>
+	</RAINBOW>
+</Themes>

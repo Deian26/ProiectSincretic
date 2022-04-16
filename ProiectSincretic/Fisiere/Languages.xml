@@ -1,0 +1,116 @@
+<Languages>
+	<languages>
+		<RO>Română</RO>
+		<EN>English</EN>
+	</languages>
+
+	<RO>
+		<L0 name="" >Generator culori hartă</L0>
+		
+		<L00 name="label_Titlu" >Generator de culori pentru o hartă</L00>
+		
+		<L01 name="groupBox_Harta">Hartă</L01>
+		<L010 name="button_GenerareHartaTastatura">Generare hartă nouă</L010>
+		<L011 name="button_GenerareHartaDinFisier">Generare hartă din fișier</L011>
+		<L012 name="button_IncarcareHartaRecenta">Hărți recente</L012>
+		
+		<L02 name="groupBox_Info">Informații</L02>
+		<L020 name="button_Versiuni">Versiuni</L020>
+		<L021 name="button_Dev">Dezvoltare</L021>
+		<L022 name="button_Algoritm">Algoritm</L022>
+		<L023 name="button_Contact">Contact</L023>
+		
+		<L03 name="button_Theme">Temă aplicație</L03>
+		
+		<L04 name="button_Iesire">Ieșire</L04>
+		
+		<L05 name="label_Desc">    Această aplicație are rolul de a genera o listă de culori 
+		pentru reprezentarea unui număr de țări pe o hartă și afișarea 
+		respectivelor țări, în funcție de vecinii acestora.</L05>
+			
+		<L06 name="label_Limba">Limbă:</L06>
+		
+		<L07 name="label_Theme">Temă aplicație:</L07>
+		
+		<L1 name="">Generare hartă</L1>
+		
+		<L10 name="label_Titlu">Generare hartă nouă</L10>
+		
+		<L11 name="button_Iesire">Ieșire</L11>
+		
+		<L12 name="groupBox_IntroducereDate_B1">Introducere date</L12>
+		<L120 name="label_NrTari_B1">Număr de țări*:</L120>
+		<L121 name="label_NrCulori_B1">Număr de culori*:</L121>
+		<L122 name="label_Note_B1">* - obligatoriu</L122>
+		
+		<L13 name="groupBox_DateOptionale">Opțional</L13>
+		<L130 name="label_Tara">Țară: </L130>
+		<L132 name="label_Culoare_B1">Culoare: </L132>
+		
+		<L14 name="label_ListaTariListBox_B1">Listă de țări</L14>
+		
+		<L15 name="label_ListaCuloriListBox_B1">Listă de culori</L15>
+		
+		<L16 name="checkBox_AfisareHarta_B1">Afișare hartă</L16>
+		
+		<L17 name="button_GenerareHarta_B1">Generare</L17>
+
+	</RO>
+
+	<EN>
+		
+		<L0>Map colours generator</L0>
+		
+		<L00 name="label_Titlu">Colour generator for a map</L00>
+		
+		<L01 name="groupBox_Harta">Generate map</L01>
+		<L010 name="button_GenerareHartaTastatura">New map</L010>
+		<L011 name="button_GenerareHartaDinFisier">New map from file</L011>
+		<L012 name="button_IncarcareHartaRecenta">Recent maps</L012>
+		
+		<L02 name="groupBox_Info">About</L02>
+		<L020 name="button_Versiuni">Versions</L020>
+		<L021 name="button_Dev">Development</L021>
+		<L022 name="button_Algoritm">Algorithm</L022>
+		<L023 name="button_Contact">Contact</L023>
+		
+		<L03 name="button_Theme">Theme</L03>
+		
+		<L04 name="button_Iesire">Exit</L04>
+		
+		<L05 name="label_Desc">    This app has the role of generating a list of colours
+		to represent a number of states on a map and to display said 
+		states, respective to their neighbours.</L05>
+		
+		<L06 name="label_Limba">Language:</L06>
+		
+		<L07 name="label_Theme">Theme:</L07>
+		
+		
+		<L1 name="">Generate map</L1>
+		
+		<L10 name="label_Titlu">Generate a new map</L10>
+		
+		<L11 name="button_Iesire">Exit</L11>
+		
+		<L12 name="groupBox_IntroducereDate_B1">Enter data</L12>
+		<L120 name="label_NrTari_B1">No. of states*:</L120>
+		<L121 name="label_NrCulori_B1">No. of colours*:</L121>
+		<L122 name="label_Note_B1">* - mandatory</L122>
+		
+		<L13 name="groupBox_DateOptionale_B1">Optional</L13>
+		<L130 name="label_Tara_B1">State: </L130>
+		<L132 name="label_Culoare_B1">Colour: </L132>
+		<L133 name="label_AdaugareCuloare_B1">New colour</L133>
+		
+		<L14 name="label_ListaTariListBox_B1">List of selected states</L14>
+		
+		<L15 name="label_ListaCuloriListBox_B1">List of selected colours</L15>
+		
+		<L16 name="checkBox_AfisareHarta_B1">Show map</L16>
+		
+		<L17 name="button_GenerareHarta_B1">Generate</L17>
+		
+		
+	</EN>
+</Languages>

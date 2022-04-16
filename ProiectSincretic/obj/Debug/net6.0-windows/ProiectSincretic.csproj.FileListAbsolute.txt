@@ -16,3 +16,5 @@ C:\Users\deian\source\repos\Deian26\ProiectSincretic\ProiectSincretic\obj\Debug\
 C:\Users\deian\Source\Repos\Deian26\ProiectSincretic\ProiectSincretic\obj\Debug\net6.0-windows\ProiectSincretic.Meniu_principal.resources
 C:\Users\deian\Source\Repos\Deian26\ProiectSincretic\ProiectSincretic\obj\Debug\net6.0-windows\refint\ProiectSincretic.dll
 C:\Users\deian\Source\Repos\Deian26\ProiectSincretic\ProiectSincretic\obj\Debug\net6.0-windows\ProiectSincretic.Generare_harta_tastatura.resources
+C:\Users\deian\Source\Repos\Deian26\ProiectSincretic\ProiectSincretic\obj\Debug\net6.0-windows\ProiectSincretic.Incarcare_harta.resources
+C:\Users\deian\Source\Repos\Deian26\ProiectSincretic\ProiectSincretic\obj\Debug\net6.0-windows\ProiectSincretic.Harti_recente.resources

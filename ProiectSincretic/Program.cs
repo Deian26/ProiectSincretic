@@ -3,12 +3,16 @@ namespace ProiectSincretic
 {
     internal static class @interface
     {
+
         [STAThread]
         static void Main()
         {
             ApplicationConfiguration.Initialize();
 
-            Application.Run(new Meniu_principal());
+            Meniu_principal M0 = new Meniu_principal();
+
+            Application.Run(M0);
+            
         }
     }
 }

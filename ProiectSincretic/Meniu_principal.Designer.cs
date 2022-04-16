@@ -23,6 +23,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Meniu_principal));
             this.BottomToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.TopToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.RightToolStripPanel = new System.Windows.Forms.ToolStripPanel();
@@ -30,21 +31,26 @@
             this.ContentPanel = new System.Windows.Forms.ToolStripContentPanel();
             this.label_Titlu = new System.Windows.Forms.Label();
             this.groupBox_Harta = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_IncarcareHartaRecenta = new System.Windows.Forms.Button();
+            this.button_GenerareHartaDinFisier = new System.Windows.Forms.Button();
             this.button_GenerareHartaTastatura = new System.Windows.Forms.Button();
             this.groupBox_Info = new System.Windows.Forms.GroupBox();
             this.button_Algoritm = new System.Windows.Forms.Button();
             this.button_Contact = new System.Windows.Forms.Button();
             this.button_Dev = new System.Windows.Forms.Button();
             this.button_Versiuni = new System.Windows.Forms.Button();
-            this.button_Theme = new System.Windows.Forms.Button();
             this.button_Iesire = new System.Windows.Forms.Button();
             this.statusStrip_StatusAplicatie = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel_Text = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel_Timp = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer_TimpExecutieAplicatie = new System.Windows.Forms.Timer(this.components);
             this.label_Desc = new System.Windows.Forms.Label();
+            this.comboBox_Language = new System.Windows.Forms.ComboBox();
+            this.label_Limba = new System.Windows.Forms.Label();
+            this.openFileDialog_IncarcareHarta = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.label_Theme = new System.Windows.Forms.Label();
+            this.comboBox_Theme = new System.Windows.Forms.ComboBox();
             this.groupBox_Harta.SuspendLayout();
             this.groupBox_Info.SuspendLayout();
             this.statusStrip_StatusAplicatie.SuspendLayout();
@@ -52,93 +58,68 @@
             // 
             // BottomToolStripPanel
             // 
-            this.BottomToolStripPanel.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.BottomToolStripPanel, "BottomToolStripPanel");
             this.BottomToolStripPanel.Name = "BottomToolStripPanel";
             this.BottomToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal;
             this.BottomToolStripPanel.RowMargin = new System.Windows.Forms.Padding(4, 0, 0, 0);
-            this.BottomToolStripPanel.Size = new System.Drawing.Size(0, 0);
             // 
             // TopToolStripPanel
             // 
-            this.TopToolStripPanel.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.TopToolStripPanel, "TopToolStripPanel");
             this.TopToolStripPanel.Name = "TopToolStripPanel";
             this.TopToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal;
             this.TopToolStripPanel.RowMargin = new System.Windows.Forms.Padding(4, 0, 0, 0);
-            this.TopToolStripPanel.Size = new System.Drawing.Size(0, 0);
             // 
             // RightToolStripPanel
             // 
-            this.RightToolStripPanel.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.RightToolStripPanel, "RightToolStripPanel");
             this.RightToolStripPanel.Name = "RightToolStripPanel";
             this.RightToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal;
             this.RightToolStripPanel.RowMargin = new System.Windows.Forms.Padding(4, 0, 0, 0);
-            this.RightToolStripPanel.Size = new System.Drawing.Size(0, 0);
             // 
             // LeftToolStripPanel
             // 
-            this.LeftToolStripPanel.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.LeftToolStripPanel, "LeftToolStripPanel");
             this.LeftToolStripPanel.Name = "LeftToolStripPanel";
             this.LeftToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal;
             this.LeftToolStripPanel.RowMargin = new System.Windows.Forms.Padding(4, 0, 0, 0);
-            this.LeftToolStripPanel.Size = new System.Drawing.Size(0, 0);
             // 
             // ContentPanel
             // 
-            this.ContentPanel.Size = new System.Drawing.Size(188, 194);
+            resources.ApplyResources(this.ContentPanel, "ContentPanel");
             // 
             // label_Titlu
             // 
-            this.label_Titlu.AutoSize = true;
-            this.label_Titlu.Font = new System.Drawing.Font("Consolas", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_Titlu.Location = new System.Drawing.Point(37, 9);
+            resources.ApplyResources(this.label_Titlu, "label_Titlu");
             this.label_Titlu.Name = "label_Titlu";
-            this.label_Titlu.Size = new System.Drawing.Size(525, 33);
-            this.label_Titlu.TabIndex = 0;
-            this.label_Titlu.Text = "Generator de culori pentru o hartă";
             // 
             // groupBox_Harta
             // 
-            this.groupBox_Harta.Controls.Add(this.button2);
-            this.groupBox_Harta.Controls.Add(this.button1);
+            this.groupBox_Harta.Controls.Add(this.button_IncarcareHartaRecenta);
+            this.groupBox_Harta.Controls.Add(this.button_GenerareHartaDinFisier);
             this.groupBox_Harta.Controls.Add(this.button_GenerareHartaTastatura);
-            this.groupBox_Harta.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox_Harta.Location = new System.Drawing.Point(21, 64);
+            resources.ApplyResources(this.groupBox_Harta, "groupBox_Harta");
             this.groupBox_Harta.Name = "groupBox_Harta";
-            this.groupBox_Harta.Size = new System.Drawing.Size(274, 197);
-            this.groupBox_Harta.TabIndex = 1;
             this.groupBox_Harta.TabStop = false;
-            this.groupBox_Harta.Text = "Hartă";
             // 
-            // button2
+            // button_IncarcareHartaRecenta
             // 
-            this.button2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(16, 108);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(238, 29);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Încărcare hartă din fișier";
-            this.button2.UseVisualStyleBackColor = true;
-            
+            resources.ApplyResources(this.button_IncarcareHartaRecenta, "button_IncarcareHartaRecenta");
+            this.button_IncarcareHartaRecenta.Name = "button_IncarcareHartaRecenta";
+            this.button_IncarcareHartaRecenta.UseVisualStyleBackColor = true;
+            this.button_IncarcareHartaRecenta.Click += new System.EventHandler(this.button_IncarcareHartaRecenta_Click);
             // 
-            // button1
+            // button_GenerareHartaDinFisier
             // 
-            this.button1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(16, 73);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(238, 29);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Generare hartă din fișier";
-            this.button1.UseVisualStyleBackColor = true;
-            
+            resources.ApplyResources(this.button_GenerareHartaDinFisier, "button_GenerareHartaDinFisier");
+            this.button_GenerareHartaDinFisier.Name = "button_GenerareHartaDinFisier";
+            this.button_GenerareHartaDinFisier.UseVisualStyleBackColor = true;
+            this.button_GenerareHartaDinFisier.Click += new System.EventHandler(this.button_GenerareHartaDinFisier_Click);
             // 
             // button_GenerareHartaTastatura
             // 
-            this.button_GenerareHartaTastatura.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_GenerareHartaTastatura.Location = new System.Drawing.Point(16, 38);
+            resources.ApplyResources(this.button_GenerareHartaTastatura, "button_GenerareHartaTastatura");
             this.button_GenerareHartaTastatura.Name = "button_GenerareHartaTastatura";
-            this.button_GenerareHartaTastatura.Size = new System.Drawing.Size(238, 29);
-            this.button_GenerareHartaTastatura.TabIndex = 0;
-            this.button_GenerareHartaTastatura.Text = "Generare hartă nouă";
             this.button_GenerareHartaTastatura.UseVisualStyleBackColor = true;
             this.button_GenerareHartaTastatura.Click += new System.EventHandler(this.button_GenerareHartaTastatura_Click);
             // 
@@ -148,78 +129,44 @@
             this.groupBox_Info.Controls.Add(this.button_Contact);
             this.groupBox_Info.Controls.Add(this.button_Dev);
             this.groupBox_Info.Controls.Add(this.button_Versiuni);
-            this.groupBox_Info.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox_Info.Location = new System.Drawing.Point(322, 64);
+            resources.ApplyResources(this.groupBox_Info, "groupBox_Info");
             this.groupBox_Info.Name = "groupBox_Info";
-            this.groupBox_Info.Size = new System.Drawing.Size(251, 197);
-            this.groupBox_Info.TabIndex = 3;
             this.groupBox_Info.TabStop = false;
-            this.groupBox_Info.Text = "Informații";
             // 
             // button_Algoritm
             // 
-            this.button_Algoritm.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_Algoritm.Location = new System.Drawing.Point(30, 108);
+            resources.ApplyResources(this.button_Algoritm, "button_Algoritm");
             this.button_Algoritm.Name = "button_Algoritm";
-            this.button_Algoritm.Size = new System.Drawing.Size(183, 29);
-            this.button_Algoritm.TabIndex = 3;
-            this.button_Algoritm.Text = "Algoritm";
             this.button_Algoritm.UseVisualStyleBackColor = true;
             this.button_Algoritm.Click += new System.EventHandler(this.button_Algoritm_Click);
             // 
             // button_Contact
             // 
-            this.button_Contact.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_Contact.Location = new System.Drawing.Point(30, 143);
+            resources.ApplyResources(this.button_Contact, "button_Contact");
             this.button_Contact.Name = "button_Contact";
-            this.button_Contact.Size = new System.Drawing.Size(183, 29);
-            this.button_Contact.TabIndex = 2;
-            this.button_Contact.Text = "Contact";
             this.button_Contact.UseVisualStyleBackColor = true;
             this.button_Contact.Click += new System.EventHandler(this.button_Contact_Click);
             // 
             // button_Dev
             // 
-            this.button_Dev.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_Dev.Location = new System.Drawing.Point(30, 73);
+            resources.ApplyResources(this.button_Dev, "button_Dev");
             this.button_Dev.Name = "button_Dev";
-            this.button_Dev.Size = new System.Drawing.Size(183, 29);
-            this.button_Dev.TabIndex = 1;
-            this.button_Dev.Text = "Dezvoltare";
             this.button_Dev.UseVisualStyleBackColor = true;
             this.button_Dev.Click += new System.EventHandler(this.button_Dev_Click);
             // 
             // button_Versiuni
             // 
-            this.button_Versiuni.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_Versiuni.Location = new System.Drawing.Point(30, 38);
+            resources.ApplyResources(this.button_Versiuni, "button_Versiuni");
             this.button_Versiuni.Name = "button_Versiuni";
-            this.button_Versiuni.Size = new System.Drawing.Size(183, 29);
-            this.button_Versiuni.TabIndex = 0;
-            this.button_Versiuni.Text = "Versiuni";
             this.button_Versiuni.UseVisualStyleBackColor = true;
             this.button_Versiuni.Click += new System.EventHandler(this.button_Versiuni_Click);
             // 
-            // button_Theme
-            // 
-            this.button_Theme.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_Theme.Location = new System.Drawing.Point(322, 378);
-            this.button_Theme.Name = "button_Theme";
-            this.button_Theme.Size = new System.Drawing.Size(134, 29);
-            this.button_Theme.TabIndex = 4;
-            this.button_Theme.Text = "Temă aplicație";
-            this.button_Theme.UseVisualStyleBackColor = true;
-            this.button_Theme.Click += new System.EventHandler(this.button_Theme_Click);
-            // 
             // button_Iesire
             // 
-            this.button_Iesire.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_Iesire.Location = new System.Drawing.Point(461, 378);
+            this.button_Iesire.BackColor = System.Drawing.Color.LavenderBlush;
+            resources.ApplyResources(this.button_Iesire, "button_Iesire");
             this.button_Iesire.Name = "button_Iesire";
-            this.button_Iesire.Size = new System.Drawing.Size(134, 29);
-            this.button_Iesire.TabIndex = 5;
-            this.button_Iesire.Text = "Ieșire";
-            this.button_Iesire.UseVisualStyleBackColor = true;
+            this.button_Iesire.UseVisualStyleBackColor = false;
             this.button_Iesire.Click += new System.EventHandler(this.button_Iesire_Click);
             // 
             // statusStrip_StatusAplicatie
@@ -228,23 +175,18 @@
             this.statusStrip_StatusAplicatie.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel_Text,
             this.toolStripStatusLabel_Timp});
-            this.statusStrip_StatusAplicatie.Location = new System.Drawing.Point(0, 410);
+            resources.ApplyResources(this.statusStrip_StatusAplicatie, "statusStrip_StatusAplicatie");
             this.statusStrip_StatusAplicatie.Name = "statusStrip_StatusAplicatie";
-            this.statusStrip_StatusAplicatie.Size = new System.Drawing.Size(607, 26);
-            this.statusStrip_StatusAplicatie.TabIndex = 6;
-            this.statusStrip_StatusAplicatie.Text = "statusStrip1";
             // 
             // toolStripStatusLabel_Text
             // 
+            resources.ApplyResources(this.toolStripStatusLabel_Text, "toolStripStatusLabel_Text");
             this.toolStripStatusLabel_Text.Name = "toolStripStatusLabel_Text";
-            this.toolStripStatusLabel_Text.Size = new System.Drawing.Size(186, 20);
-            this.toolStripStatusLabel_Text.Text = "Timp petrecut în aplicație: ";
             // 
             // toolStripStatusLabel_Timp
             // 
+            resources.ApplyResources(this.toolStripStatusLabel_Timp, "toolStripStatusLabel_Timp");
             this.toolStripStatusLabel_Timp.Name = "toolStripStatusLabel_Timp";
-            this.toolStripStatusLabel_Timp.Size = new System.Drawing.Size(42, 20);
-            this.toolStripStatusLabel_Timp.Text = "TIMP";
             // 
             // timer_TimpExecutieAplicatie
             // 
@@ -252,31 +194,51 @@
             // 
             // label_Desc
             // 
-            this.label_Desc.AutoSize = true;
-            this.label_Desc.Font = new System.Drawing.Font("Consolas", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_Desc.Location = new System.Drawing.Point(21, 264);
+            resources.ApplyResources(this.label_Desc, "label_Desc");
             this.label_Desc.Name = "label_Desc";
-            this.label_Desc.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label_Desc.Size = new System.Drawing.Size(530, 88);
-            this.label_Desc.TabIndex = 7;
-            this.label_Desc.Text = "    Această aplicație are rolul de a genera o listă \r\nde culori pentru reprezenta" +
-    "rea unui număr de \r\nțări pe o hartă și afișarea respectivelor țări, \r\nîn funcție" +
-    " de vecinii acestora.";
+            // 
+            // comboBox_Language
+            // 
+            this.comboBox_Language.FormattingEnabled = true;
+            resources.ApplyResources(this.comboBox_Language, "comboBox_Language");
+            this.comboBox_Language.Name = "comboBox_Language";
+            this.comboBox_Language.SelectedIndexChanged += new System.EventHandler(this.comboBox_Language_SelectedIndexChanged);
+            // 
+            // label_Limba
+            // 
+            resources.ApplyResources(this.label_Limba, "label_Limba");
+            this.label_Limba.Name = "label_Limba";
+            // 
+            // label_Theme
+            // 
+            resources.ApplyResources(this.label_Theme, "label_Theme");
+            this.label_Theme.Name = "label_Theme";
+            // 
+            // comboBox_Theme
+            // 
+            this.comboBox_Theme.FormattingEnabled = true;
+            resources.ApplyResources(this.comboBox_Theme, "comboBox_Theme");
+            this.comboBox_Theme.Name = "comboBox_Theme";
+            this.comboBox_Theme.SelectedIndexChanged += new System.EventHandler(this.comboBox_Theme_SelectedIndexChanged);
             // 
             // Meniu_principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(607, 436);
+            this.Controls.Add(this.comboBox_Theme);
+            this.Controls.Add(this.label_Theme);
+            this.Controls.Add(this.label_Limba);
+            this.Controls.Add(this.comboBox_Language);
             this.Controls.Add(this.label_Desc);
             this.Controls.Add(this.statusStrip_StatusAplicatie);
             this.Controls.Add(this.button_Iesire);
-            this.Controls.Add(this.button_Theme);
             this.Controls.Add(this.groupBox_Info);
             this.Controls.Add(this.groupBox_Harta);
             this.Controls.Add(this.label_Titlu);
+            this.MaximizeBox = false;
             this.Name = "Meniu_principal";
-            this.Text = "Generator culori hartă";
+            this.ShowIcon = false;
+            this.Load += new System.EventHandler(this.Meniu_principal_Load);
             this.groupBox_Harta.ResumeLayout(false);
             this.groupBox_Info.ResumeLayout(false);
             this.statusStrip_StatusAplicatie.ResumeLayout(false);
@@ -295,20 +257,25 @@
         private ToolStripContentPanel ContentPanel;
         private Label label_Titlu;
         private GroupBox groupBox_Harta;
-        private Button button2;
-        private Button button1;
+        private Button button_IncarcareHartaRecenta;
+        private Button button_GenerareHartaDinFisier;
         private Button button_GenerareHartaTastatura;
         private GroupBox groupBox_Info;
         private Button button_Algoritm;
         private Button button_Contact;
         private Button button_Dev;
         private Button button_Versiuni;
-        private Button button_Theme;
         private Button button_Iesire;
         private StatusStrip statusStrip_StatusAplicatie;
         private ToolStripStatusLabel toolStripStatusLabel_Text;
         private ToolStripStatusLabel toolStripStatusLabel_Timp;
         private System.Windows.Forms.Timer timer_TimpExecutieAplicatie;
         private Label label_Desc;
+        private ComboBox comboBox_Language;
+        private Label label_Limba;
+        private OpenFileDialog openFileDialog_IncarcareHarta;
+        private SaveFileDialog saveFileDialog1;
+        private Label label_Theme;
+        private ComboBox comboBox_Theme;
     }
 }

@@ -1,0 +1,11 @@
+<Errors>	
+	<EN>
+		<E0>Undefined error</E0>
+		
+		<EB1_1>Not a number</EB1_1>
+		<EB1_2>Invalid state name</EB1_2>
+		<EB1_3>State not found in states list</EB1_3>
+		<EB1_4>Colour not found in colours list</EB1_4>
+		
+	</EN>
+</Errors>

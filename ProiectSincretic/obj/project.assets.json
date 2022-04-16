@@ -15,9 +15,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\deian\\Source\\Repos\\Deian26\\ProiectSincretic\\ProiectSincretic\\ProiectSincretic.csproj",
-      "projectName": "ProiectSincretic",
-      "projectPath": "C:\\Users\\deian\\Source\\Repos\\Deian26\\ProiectSincretic\\ProiectSincretic\\ProiectSincretic.csproj",
+      "projectUniqueName": "C:\\Users\\deian\\Source\\Repos\\Deian26\\ProiectSincretic\\ProiectSincretic\\Main.csproj",
+      "projectName": "Main",
+      "projectPath": "C:\\Users\\deian\\Source\\Repos\\Deian26\\ProiectSincretic\\ProiectSincretic\\Main.csproj",
       "packagesPath": "C:\\Users\\deian\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\deian\\Source\\Repos\\Deian26\\ProiectSincretic\\ProiectSincretic\\obj\\",
       "projectStyle": "PackageReference",
@@ -70,7 +70,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
