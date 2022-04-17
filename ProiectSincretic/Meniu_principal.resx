@@ -146,69 +146,6 @@
   <data name="&gt;&gt;label_Titlu.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="&gt;&gt;button_IncarcareHartaRecenta.Name" xml:space="preserve">
-    <value>button_IncarcareHartaRecenta</value>
-  </data>
-  <data name="&gt;&gt;button_IncarcareHartaRecenta.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button_IncarcareHartaRecenta.Parent" xml:space="preserve">
-    <value>groupBox_Harta</value>
-  </data>
-  <data name="&gt;&gt;button_IncarcareHartaRecenta.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;button_GenerareHartaDinFisier.Name" xml:space="preserve">
-    <value>button_GenerareHartaDinFisier</value>
-  </data>
-  <data name="&gt;&gt;button_GenerareHartaDinFisier.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button_GenerareHartaDinFisier.Parent" xml:space="preserve">
-    <value>groupBox_Harta</value>
-  </data>
-  <data name="&gt;&gt;button_GenerareHartaDinFisier.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;button_GenerareHartaTastatura.Name" xml:space="preserve">
-    <value>button_GenerareHartaTastatura</value>
-  </data>
-  <data name="&gt;&gt;button_GenerareHartaTastatura.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button_GenerareHartaTastatura.Parent" xml:space="preserve">
-    <value>groupBox_Harta</value>
-  </data>
-  <data name="&gt;&gt;button_GenerareHartaTastatura.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="groupBox_Harta.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Consolas, 9pt</value>
-  </data>
-  <data name="groupBox_Harta.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 58</value>
-  </data>
-  <data name="groupBox_Harta.Size" type="System.Drawing.Size, System.Drawing">
-    <value>274, 202</value>
-  </data>
-  <data name="groupBox_Harta.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="groupBox_Harta.Text" xml:space="preserve">
-    <value>Hartă</value>
-  </data>
-  <data name="&gt;&gt;groupBox_Harta.Name" xml:space="preserve">
-    <value>groupBox_Harta</value>
-  </data>
-  <data name="&gt;&gt;groupBox_Harta.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox_Harta.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupBox_Harta.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
   <data name="button_IncarcareHartaRecenta.Font" type="System.Drawing.Font, System.Drawing">
     <value>Consolas, 9pt</value>
   </data>
@@ -290,80 +227,32 @@
   <data name="&gt;&gt;button_GenerareHartaTastatura.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;button_Algoritm.Name" xml:space="preserve">
-    <value>button_Algoritm</value>
-  </data>
-  <data name="&gt;&gt;button_Algoritm.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button_Algoritm.Parent" xml:space="preserve">
-    <value>groupBox_Info</value>
-  </data>
-  <data name="&gt;&gt;button_Algoritm.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;button_Contact.Name" xml:space="preserve">
-    <value>button_Contact</value>
-  </data>
-  <data name="&gt;&gt;button_Contact.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button_Contact.Parent" xml:space="preserve">
-    <value>groupBox_Info</value>
-  </data>
-  <data name="&gt;&gt;button_Contact.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;button_Dev.Name" xml:space="preserve">
-    <value>button_Dev</value>
-  </data>
-  <data name="&gt;&gt;button_Dev.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button_Dev.Parent" xml:space="preserve">
-    <value>groupBox_Info</value>
-  </data>
-  <data name="&gt;&gt;button_Dev.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;button_Versiuni.Name" xml:space="preserve">
-    <value>button_Versiuni</value>
-  </data>
-  <data name="&gt;&gt;button_Versiuni.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button_Versiuni.Parent" xml:space="preserve">
-    <value>groupBox_Info</value>
-  </data>
-  <data name="&gt;&gt;button_Versiuni.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="groupBox_Info.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="groupBox_Harta.Font" type="System.Drawing.Font, System.Drawing">
     <value>Consolas, 9pt</value>
   </data>
-  <data name="groupBox_Info.Location" type="System.Drawing.Point, System.Drawing">
-    <value>301, 58</value>
+  <data name="groupBox_Harta.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 58</value>
   </data>
-  <data name="groupBox_Info.Size" type="System.Drawing.Size, System.Drawing">
-    <value>251, 202</value>
+  <data name="groupBox_Harta.Size" type="System.Drawing.Size, System.Drawing">
+    <value>274, 202</value>
   </data>
-  <data name="groupBox_Info.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="groupBox_Harta.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="groupBox_Info.Text" xml:space="preserve">
-    <value>Informații</value>
+  <data name="groupBox_Harta.Text" xml:space="preserve">
+    <value>Hartă</value>
   </data>
-  <data name="&gt;&gt;groupBox_Info.Name" xml:space="preserve">
-    <value>groupBox_Info</value>
+  <data name="&gt;&gt;groupBox_Harta.Name" xml:space="preserve">
+    <value>groupBox_Harta</value>
   </data>
-  <data name="&gt;&gt;groupBox_Info.Type" xml:space="preserve">
+  <data name="&gt;&gt;groupBox_Harta.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;groupBox_Info.Parent" xml:space="preserve">
+  <data name="&gt;&gt;groupBox_Harta.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;groupBox_Info.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="&gt;&gt;groupBox_Harta.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
   <data name="button_Algoritm.Font" type="System.Drawing.Font, System.Drawing">
     <value>Consolas, 9pt</value>
@@ -473,6 +362,33 @@
   <data name="&gt;&gt;button_Versiuni.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="groupBox_Info.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 9pt</value>
+  </data>
+  <data name="groupBox_Info.Location" type="System.Drawing.Point, System.Drawing">
+    <value>301, 58</value>
+  </data>
+  <data name="groupBox_Info.Size" type="System.Drawing.Size, System.Drawing">
+    <value>251, 202</value>
+  </data>
+  <data name="groupBox_Info.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="groupBox_Info.Text" xml:space="preserve">
+    <value>Informații</value>
+  </data>
+  <data name="&gt;&gt;groupBox_Info.Name" xml:space="preserve">
+    <value>groupBox_Info</value>
+  </data>
+  <data name="&gt;&gt;groupBox_Info.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox_Info.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox_Info.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="button_Iesire.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -507,6 +423,24 @@
   <metadata name="statusStrip_StatusAplicatie.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="toolStripStatusLabel_Text.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 9pt</value>
+  </data>
+  <data name="toolStripStatusLabel_Text.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 18</value>
+  </data>
+  <data name="toolStripStatusLabel_Text.Text" xml:space="preserve">
+    <value>Timp petrecut în aplicație: </value>
+  </data>
+  <data name="toolStripStatusLabel_Timp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 9pt</value>
+  </data>
+  <data name="toolStripStatusLabel_Timp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="toolStripStatusLabel_Timp.Text" xml:space="preserve">
+    <value>#TIMP#</value>
+  </data>
   <data name="statusStrip_StatusAplicatie.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 447</value>
   </data>
@@ -530,24 +464,6 @@
   </data>
   <data name="&gt;&gt;statusStrip_StatusAplicatie.ZOrder" xml:space="preserve">
     <value>5</value>
-  </data>
-  <data name="toolStripStatusLabel_Text.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Consolas, 9pt</value>
-  </data>
-  <data name="toolStripStatusLabel_Text.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 18</value>
-  </data>
-  <data name="toolStripStatusLabel_Text.Text" xml:space="preserve">
-    <value>Timp petrecut în aplicație: </value>
-  </data>
-  <data name="toolStripStatusLabel_Timp.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Consolas, 9pt</value>
-  </data>
-  <data name="toolStripStatusLabel_Timp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 18</value>
-  </data>
-  <data name="toolStripStatusLabel_Timp.Text" xml:space="preserve">
-    <value>#TIMP#</value>
   </data>
   <metadata name="timer_TimpExecutieAplicatie.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>252, 17</value>

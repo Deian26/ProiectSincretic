@@ -11,6 +11,9 @@ namespace ProiectSincretic
     {
         //variabile
 
+        //flags
+        bool startup = true;
+
         //optiuni
         string language = "RO",
             theme = "DEFAULT";
@@ -53,6 +56,8 @@ namespace ProiectSincretic
         string languages_filename = "..//..//..//Fisiere//Languages.xml";//cale fisier traduceri
         string SoftwareInfo_filename = "..//..//..//Fisiere//SoftwareInfo.xml";//cale fisier SoftwareInfo.xml
         string themes_filename = "..//..//..//Fisiere//Themes.xml";//cale fisier Themes.xml
+        string states_filename = "..//..//..//Fisiere//States.xml";//cale fisier States.xml
+        string colours_filename = "..//..//..//Fisiere//Colours.xml";//cale fisier Colours.xml
         
 
         //load form
@@ -72,24 +77,20 @@ namespace ProiectSincretic
 
             //limba
             if(comboBox_Language.Items.Count==0) ut.LoadLanguageList(languages_filename,language_list, comboBox_Language);
-            comboBox_Language.SelectedItem = comboBox_Language.Items[0];
             ut.LoadTranslations(language,languages_filename, language_texts);
             ut.RewriteTexts(language_texts, this);
 
             //theme
             if (comboBox_Theme.Items.Count == 0) ut.LoadThemeList(themes_filename, theme_list, comboBox_Theme);
             ut.ChangeTheme(theme, themes_filename, this);
-            comboBox_Theme.SelectedItem = comboBox_Theme.Items[0];
 
-            //forms (initializare prin constructori)
-            B1 = new Generare_harta_tastatura(language, theme, languages_filename, themes_filename, err_filename);
-            B3 = new Harti_recente(language, theme, languages_filename, themes_filename, err_filename);
-
-            //adaugare form event handlers
-            B1.FormClosing += B1_FormClosing;
-            B1.FormClosed += B1_FormClosed;
-
-            B3.FormClosing += B3_FormClosing;
+            //setari comboBox
+            if(startup==true)
+            {
+              startup = false;
+              comboBox_Language.SelectedItem = comboBox_Language.Items[0];
+              comboBox_Theme.SelectedItem = comboBox_Theme.Items[0];
+            }
         }
 
         //tratare evenimente
@@ -160,7 +161,10 @@ namespace ProiectSincretic
         private void button_IncarcareHartaRecenta_Click(object sender, EventArgs e)
         {
             this.Hide();
+            B3 = new Harti_recente(language, theme, languages_filename, themes_filename, err_filename, this.Location);
+            B3.FormClosing += B3_FormClosing;
             B3.ShowDialog();
+
         }
 
         private void comboBox_Language_SelectedIndexChanged(object sender, EventArgs e)
@@ -184,8 +188,9 @@ namespace ProiectSincretic
         private void button_GenerareHartaTastatura_Click(object sender, EventArgs e)
         {
             this.Hide();
-
-            //B1.Location = new Point(M0_x,M0_y); //dev: to implement
+            B1 = new Generare_harta_tastatura(language, theme, languages_filename, themes_filename, err_filename, states_filename, colours_filename, this.Location);
+            //B1.FormClosing += B1_FormClosing;
+            B1.FormClosed += B1_FormClosed;
             B1.ShowDialog();
 
         }

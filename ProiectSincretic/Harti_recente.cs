@@ -19,8 +19,11 @@ namespace ProiectSincretic
         List<Utilitary.err> err_messages = new List<Utilitary.err>();
         List<Utilitary.language> language_texts= new List<Utilitary.language>();
         bool ERR = false;
-        public Harti_recente(string language, string theme, string languages_filename, string themes_filename, string err_filename)
+        public Harti_recente(string language, string theme, string languages_filename, string themes_filename, string err_filename, Point location)
         {
+            //locatie form
+            this.Location = location;
+
             this.language = language;
             this.theme = theme;
             this.languages_filename = languages_filename;

@@ -8,7 +8,7 @@ using System.Xml;
 namespace Main
 {
 
-    internal class Utilitary //clasa care defineste structuri de date si functii utilitare
+    public class Utilitary //clasa care defineste structuri de date si functii utilitare
     {
         //structuri de date
         public struct err
@@ -25,7 +25,7 @@ namespace Main
                 this.code = code;
                 this.desc = desc;
             }
-
+            //getters
             public string getErr(string code)
             {
                 if (this.code == code) return this.code + ": " + this.desc;
@@ -47,6 +47,7 @@ namespace Main
                 this.name = name;
                 this.text = text;
             }
+            //getters
             public string getText()
             {
                 return this.text;
@@ -56,6 +57,84 @@ namespace Main
                 return this.name;
             }
         };
+
+        //structura care memoreaza tara curenta si vecinii sai
+        public struct Tara
+        {
+            private string tara;
+            private List<string> vecini;
+
+            //setters
+            public void setTara(string tara)
+            {
+                this.tara = tara;
+            }
+            public void setVecini(List<string> vecini)
+            {
+                this.vecini = vecini;
+            }
+            //getters
+            public string getTara()
+            {
+                return this.tara;
+            }
+            public List<string> getVecini()
+            {
+                return this.vecini;
+            }
+
+        };
+
+        //structura care salveaza datele returnate de catre algoritm spre a fi stocate pe disc (fisier)
+        public struct FileSave
+        {
+            private string tara;
+            private string culoare;
+            private List<string> vecini;
+
+            //setters
+            public void setTara(string tara)
+            {
+                this.tara = tara;
+            }
+            public void setVecini(List<string> vecini)
+            {
+                this.vecini = vecini;
+            }
+            public void setCuloare(string culoare)
+            {
+                this.culoare = culoare;
+            }
+
+            //getters
+            public string getTara()
+            {
+                return this.tara;
+            }
+            public List<string> getVecini()
+            {
+                return this.vecini;
+            }
+
+            public string getCuloare()
+            {
+                return this.culoare;
+            }
+        };
+
+
+        //algoritm
+        public FileSave Algorithm(List<Tara>tari_alese, List<string>culori_alese)
+        {
+            FileSave result = new FileSave();
+
+            /*
+             * Code
+             */
+
+            return result;
+        }
+
 
         //functii
 
@@ -232,6 +311,20 @@ namespace Main
                 title[0].Font = new Font(FontFamily.Families[8], 16.0F);
                 //title[0].Font = new Font(FontFamily.Families[8], 16.0F,FontStyle.Bold);
             }
+
+        }
+
+
+        //incarcare tari si culori in comboBox-urile corespondente
+        public void LoadComboBox(string language, string filename, ComboBox combo)
+        {
+            XmlDocument xml = new XmlDocument();
+            xml.Load(filename);
+
+            foreach (XmlNode node in xml.DocumentElement.ChildNodes)
+                if(node.Name==language)
+                    foreach(XmlNode node2 in node.ChildNodes)
+                        combo.Items.Add(node2.InnerText);
 
         }
 

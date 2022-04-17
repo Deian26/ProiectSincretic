@@ -23,8 +23,11 @@ namespace Main
 
         //constructori
         //salvare in lista comboBox-ului comboBox_ListaVecini a tarilor care pot fi selectate drept vecini pentru tara curenta
-        public Ad_vecini(List<string> vecini_, string tara_curenta,string language, string languages_filename, string themes_filename, string err_filename)
+        public Ad_vecini(List<string> vecini_, string tara_curenta,string language, string languages_filename, string themes_filename, string err_filename, Point location)
         {
+            //locatie form
+            this.Location = location;
+
             InitializeComponent();
             this.tara_curenta = tara_curenta;
             this.languages_filename = languages_filename;
@@ -40,12 +43,12 @@ namespace Main
 
         //functii utilitare
         //salveaza datele despre o tara si vecinii sai intr-o instanta a clasei 'Vecini'
-        public Tara setVecini()
+        public Utilitary.Tara setData()
         {
-            Tara aux = new Tara();
+            Utilitary.Tara aux = new Utilitary.Tara();
 
-            aux.setTara(tara_curenta);
-            aux.setVecini(vecini);
+            aux.setTara(this.tara_curenta);
+            aux.setVecini(this.vecini);
 
             return aux;
         }

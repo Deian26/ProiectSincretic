@@ -12,47 +12,27 @@ using System.Xml;
 
 namespace ProiectSincretic
 {
-    //structura care memoreaza tara curenta si vecinii sai
-    public struct Tara
-    {
-        private string tara;
-        private List<string> vecini;
-
-        public void setTara(string tara)
-        {
-            this.tara= tara;
-        }
-        public void setVecini(List<string> vecini)
-        {
-            this.vecini= vecini;
-        }
-
-        public string getTara()
-        {
-            return this.tara;
-        }
-        public List<string> getVecini()
-        {
-            return this.vecini;
-        }
-
-    };
-
-
     public partial class Generare_harta_tastatura : Form
     {
 
         //variabile
+        Utilitary ut = new Utilitary();
+
         string language, //limba
                theme, //tema aplicatie
                languages_filename, //cale fisier traduceri
                themes_filename, //cale fisier themes
-               err_filename; //cale fisier mesaje de eroare
+               err_filename, //cale fisier mesaje de eroare
+               states_filename, // cale fisier nume tari
+               colours_filename; //cale fisier culori
         bool ERR1 = false; //flag de eroare global - textBox nume tara
         bool ERR2 = false; //flag de eroare global - textBox denumire culoare
         List<string> tari = new List<string>();//lista tarilor din care se poate face selectia la generarea hartii
         List<string> culori = new List<string>();//lista culorilor din care se poate face selectia la generarea hartii
-        List<Tara> tara = new List<Tara>();
+        
+        //transmitere date catre algoritm
+        List<Utilitary.Tara> tari_alese = new List<Utilitary.Tara>(); //lista tarilor alese si vecinii acestora
+        List<string> culori_alese = new List<string>(); //lista culorilor alese
 
         List<Utilitary.err> err_message = new List<Utilitary.err>(); //mesaje de eroare
         List<Utilitary.language> language_texts = new List<Utilitary.language>(); //text afisat (in functie de limba aleasa)
@@ -63,7 +43,6 @@ namespace ProiectSincretic
         int NrTari = 0;
         string Tara = "";
         bool afisare = false;
-        //comment
 
         Color default_background_colour =Color.White;
         Color err_background_colour=Color.PaleVioletRed;
@@ -72,7 +51,6 @@ namespace ProiectSincretic
         private void Generare_harta_tastatura_Load(object sender, EventArgs e)
         {
             //variabile
-            Utilitary ut = new Utilitary();
             //locatie form
             this.Location = new Point(150, 150);
             //resetare flags
@@ -82,8 +60,12 @@ namespace ProiectSincretic
             this.FormClosed += Generare_harta_tastatura_FormClosed;
             checkBox_AfisareHarta_B1.Checked = true;
 
-            tari.Add("Romania");
-            tari.Add("Republica Moldova");
+            //adaugare tari in comboBox
+            ut.LoadComboBox(language, states_filename, comboBox_Tari_B1);
+
+            //adaugare culori in comboBox
+            ut.LoadComboBox(language, colours_filename, comboBox_Culori_B1);
+            
 
             comboBox_Tari_B1.Items.AddRange(tari.ToArray());
             comboBox_Culori_B1.Items.AddRange(culori.ToArray());
@@ -139,27 +121,26 @@ namespace ProiectSincretic
 
         //functii utilitare
 
-        //dev: obsolete function; to be deleted
-        private bool ValidCountryName(string name)
-        {
-            if (name == "") return false;
-            if (name.ElementAt(0) < 'A' || name.ElementAt(0) > 'Z') return false;
-
-            return true;
-        }
-
-
         //constructori
-        public Generare_harta_tastatura(string language, string theme, string languages_filename , string themes_filename, string err_filename)
+        public Generare_harta_tastatura(string language, string theme, string languages_filename , string themes_filename, string err_filename, string states_filename, string colours_filename, Point location)
         {
+            //locatie form
+            this.Location = location;
+
             //optiuni
             this.language = language;
             this.theme = theme;
             this.languages_filename = languages_filename;
             this.themes_filename = themes_filename;
+
+            //mesaje de eroare
             this.err_filename = err_filename;
 
+            //tari
+            this.states_filename = states_filename;
 
+            //culori
+            this.colours_filename = colours_filename;
 
             //apeluri functii
             InitializeComponent();
@@ -223,13 +204,15 @@ namespace ProiectSincretic
         private void button_GenerareHarta_Click(object sender, EventArgs e)
         {
             //#TO CHANGE WHEN NEXT FORM IS READY TO BE IMPLEMENTED#
-
             /*dev: constructor call to next form to be implemented here*/   //transmitere date catre algoritmul de generare a hartii
-
-            //#TO IMPLEMENT#
-            //dev: to add colours from listBox_ListaCulori_B1 to List<string> culori
-            //culori.AddRange(listBox_ListaCulori_B1.Items.ToString());
             
+            foreach(object item in listBox_ListaCulori_B1.Items)
+                culori_alese.Add(item.ToString());
+
+
+            //apelul functiei care implementeaza algoritmul
+            ut.Algorithm(tari_alese, culori_alese);
+
             
             this.Visible = false;
             this.Close(); //inchidere form ; dev: to delete or change to transition to next form ('afisare harta' probably)
@@ -260,10 +243,10 @@ namespace ProiectSincretic
             {
                 listBox_ListaTari_B1.Items.Add(comboBox_Tari_B1.SelectedItem.ToString());
                 tara_curenta = listBox_ListaTari_B1.Items[listBox_ListaTari_B1.Items.Count - 1].ToString();
-                Ad_vecini ad = new Ad_vecini(tari, tara_curenta,language, languages_filename, themes_filename,err_filename);
+                Ad_vecini ad = new Ad_vecini(tari, tara_curenta,language, languages_filename, themes_filename,err_filename, this.Location);
 
                 ad.ShowDialog();
-                tara.Add(ad.setVecini());
+                tari_alese.Add(ad.setData());
                 ad.Dispose();
             }
         }
