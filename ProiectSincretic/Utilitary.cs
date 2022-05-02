@@ -124,13 +124,79 @@ namespace Main
 
 
         //algoritm
-        public FileSave Algorithm(List<Tara>tari_alese, List<string>culori_alese)
+        public List<FileSave> Algorithm(List<Tara> Tari, List<string> culori)
         {
-            FileSave result = new FileSave();
+            List<FileSave> result = new List<FileSave>();
+            static bool verif(int i, List<FileSave> result, string Nume)
+            {
+                int ok = -1;
+                for (int j = 0; j < result[i].Vecini.Count; j++)
+                {
+                    if (result[i].Vecini[j] == Nume)
+                        ok = j;
+                }
+                if (ok != -1)
+                {
+                    return true;
+                }
+                return false;
+            }
+            static void setTara(List<FileSave> result, Tara tara, List<string> cul)
+            {
+                int k = result.Count;
+                int i;
+                int index = 0, indexm = 0;
+                Boolean[] seen;
+                seen = new bool[result.Count];
+                if (k == 0)
+                {
+                    FileSave t = new FileSave();
+                    t.setTara(tara.getTara());
+                    t.setCuloare(cul[index]);
+                    t.setVecini(tara.getVecini());
+                    result.Add(t);
+                }
+                else
+                {
+                    Boolean ok = false;
+                    for (i = 0; i < k; i++)
+                        if (verif(i, result, tara.Nume) == true)
+                        {
+                            index = cul.IndexOf(result[i].Culoare);
+                            seen[index] = true;
+                            if (index > indexm)
+                                indexm = index;
+                        }
 
-            /*
-             * Code
-             */
+                    for (i = 0; i <= indexm; i++)
+                        if (seen[i] == false)
+                        {
+                            ok = true;
+                            FileSave t = new FileSave();
+                            t.setTara(tara.getTara());
+                            t.setCuloare(cul[index]);
+                            t.setVecini(tara.getVecini());
+                            result.Add(t);
+                            break;
+                        }
+                    if (ok == false)
+                    {
+                        FileSave t = new FileSave();
+                        t.setTara(tara.getTara());
+                        t.setCuloare(cul[index]);
+                        t.setVecini(tara.getVecini());
+                        result.Add(t);
+                    }
+                }
+
+            }
+            static void citireDate()
+            {
+                foreach (var tara in Tari)
+                {
+                    setTara(result, tara, culori);
+                }
+            }
 
             return result;
         }
@@ -177,7 +243,7 @@ namespace Main
         }
 
         //incarca informatii despre aplicatie
-        public void LoadSoftwareInfo(string SoftwareInfo_filename,List<string> SoftwareInfo)
+        public void LoadSoftwareInfo(string SoftwareInfo_filename, List<string> SoftwareInfo)
         {
             XmlDocument xml = new XmlDocument();
             xml.Load(SoftwareInfo_filename);
@@ -274,7 +340,7 @@ namespace Main
                             }
                             if ("System.Windows.Forms." + node2.Name.ToString() == "System.Windows.Forms.GroupBox")
                             {
-                                foreach(Control ctrl_groupbox in control.Controls)
+                                foreach (Control ctrl_groupbox in control.Controls)
                                     foreach (XmlNode node3 in node.ChildNodes)
                                         if ("System.Windows.Forms." + node3.Name.ToString() == ctrl_groupbox.GetType().ToString())
                                             switch (ctrl_groupbox.GetType().ToString())
@@ -305,8 +371,8 @@ namespace Main
                 }
 
 
-            Control[] title =  form.Controls.Find("label_Titlu", true);
-            if(title.Length!=0)
+            Control[] title = form.Controls.Find("label_Titlu", true);
+            if (title.Length != 0)
             {
                 title[0].Font = new Font(FontFamily.Families[8], 16.0F);
                 //title[0].Font = new Font(FontFamily.Families[8], 16.0F,FontStyle.Bold);
@@ -322,8 +388,8 @@ namespace Main
             xml.Load(filename);
 
             foreach (XmlNode node in xml.DocumentElement.ChildNodes)
-                if(node.Name==language)
-                    foreach(XmlNode node2 in node.ChildNodes)
+                if (node.Name == language)
+                    foreach (XmlNode node2 in node.ChildNodes)
                         combo.Items.Add(node2.InnerText);
 
         }
