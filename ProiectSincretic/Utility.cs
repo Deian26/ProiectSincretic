@@ -384,20 +384,23 @@ namespace Main
         //verificare numar minim de culori
         public bool MinCuloriOk(List<Utility.Tara> tari_alese, int culori_alese_count)
         {
-            int i, j,k,nr=9999, min = 9999;
+            int i, j,k,nr=0, min = 9999;
 
             for (i = 0; i < tari_alese.Count; i++)
             {
-                if(tari_alese[i].getVecini()!=null)
-                for (nr = 0, j = 0; j < tari_alese[i].getVecini().Count; j++)
+                if (tari_alese[i].getVecini() != null)
                 {
-                    for (k = 0; k < tari_alese[i].getVecini().Count; k++)
-                        if(tari_alese[i].getVecini()[j].Equals(tari_alese[i].getVecini()[k])) nr++;
-                    if (nr < min) min = nr;
+                    for (nr = 0, j = 0; j < tari_alese[i].getVecini().Count; j++)
+                    {
+                        for (k = 0; k < tari_alese[i].getVecini().Count; k++)
+                            if (tari_alese[i].getVecini()[j].Equals(tari_alese[i].getVecini()[k])) nr++;
+                        if (nr < min) min = nr;
+                    }
                 }
+                else nr++;
             }
 
-            if (culori_alese_count >= nr) return true;
+            if (culori_alese_count >= nr && nr!=0) return true;
 
             return false;
         }

@@ -211,6 +211,19 @@ namespace ProiectSincretic
                 if (language == "RO") errorProvider_GenerareHartaTastatura.SetError(listBox_ListaCulori_B1, "Număr insuficient de culori alese");
                 else if (language == "EN") errorProvider_GenerareHartaTastatura.SetError(listBox_ListaCulori_B1, "Too few colours chosen");
                 err = true;
+            }else if(listBox_ListaCulori_B1.Items.Count==0 || listBox_ListaTari_B1.Items.Count==0)
+            {
+                if (language == "RO")
+                {
+                    errorProvider_GenerareHartaTastatura.SetError(listBox_ListaCulori_B1, "Număr insuficient de culori/țări alese");
+                    errorProvider_GenerareHartaTastatura.SetError(listBox_ListaTari_B1, "Număr insuficient de culori/țări alese");
+                }
+                else if (language == "EN")
+                {
+                    errorProvider_GenerareHartaTastatura.SetError(listBox_ListaCulori_B1, "Too few colours/states chosen");
+                    errorProvider_GenerareHartaTastatura.SetError(listBox_ListaTari_B1, "Too few colours/states chosen");
+                }
+                err = true;
             }
             else {
                 //apelul functiei care implementeaza algoritmul
