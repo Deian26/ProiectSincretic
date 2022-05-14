@@ -46,8 +46,8 @@ namespace ProiectSincretic
         Harti_recente B3;
 
         //date extrase din fisierele auxiliare
-        List<Utilitary.err> err_message = new List<Utilitary.err>(); //mesaje de eroare
-        List<Utilitary.language> language_texts = new List<Utilitary.language>(); //text afisat (in functie de limba aleasa)
+        List<Utility.err> err_message = new List<Utility.err>(); //mesaje de eroare
+        List<Utility.language> language_texts = new List<Utility.language>(); //text afisat (in functie de limba aleasa)
         List<string> language_list = new List<string>(); //lista prescurtarilor numelor traducerilor (RO, EN etc.)
         List<string> theme_list = new List<string>(); //lista prescurtarilor numelor temelor de aplicatie
 
@@ -63,7 +63,7 @@ namespace ProiectSincretic
         //load form
         private void Meniu_principal_Load(object sender, EventArgs e)
         {
-            Utilitary ut = new Utilitary();
+            Utility ut = new Utility();
 
             //locatie form
             this.Location = new Point(150, 150);

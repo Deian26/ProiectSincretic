@@ -18,8 +18,8 @@ namespace Main
         List<string> vecini = new List<string>();
         string tara_curenta,
             languages_filename, themes_filename, err_filename,language;
-        List<Utilitary.language> language_texts = new List<Utilitary.language>();
-        List<Utilitary.err> err_message = new List<Utilitary.err>();
+        List<Utility.language> language_texts = new List<Utility.language>();
+        List<Utility.err> err_message = new List<Utility.err>();
 
         //constructori
         //salvare in lista comboBox-ului comboBox_ListaVecini a tarilor care pot fi selectate drept vecini pentru tara curenta
@@ -43,9 +43,9 @@ namespace Main
 
         //functii utilitare
         //salveaza datele despre o tara si vecinii sai intr-o instanta a clasei 'Vecini'
-        public Utilitary.Tara setData()
+        public Utility.Tara setData()
         {
-            Utilitary.Tara aux = new Utilitary.Tara();
+            Utility.Tara aux = new Utility.Tara();
 
             aux.setTara(this.tara_curenta);
             aux.setVecini(this.vecini);
@@ -57,7 +57,7 @@ namespace Main
         //event handlers
         private void Ad_vecini_Load(object sender, EventArgs e)
         {
-            Utilitary ut = new Utilitary();
+            Utility ut = new Utility();
             //locatie form
             this.Location = new Point(150, 150);
             //setare preferinte

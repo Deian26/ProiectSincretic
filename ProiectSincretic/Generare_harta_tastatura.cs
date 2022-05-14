@@ -16,7 +16,7 @@ namespace ProiectSincretic
     {
 
         //variabile
-        Utilitary ut = new Utilitary();
+        Utility ut = new Utility();
 
         string language, //limba
                theme, //tema aplicatie
@@ -31,11 +31,11 @@ namespace ProiectSincretic
         List<string> culori = new List<string>();//lista culorilor din care se poate face selectia la generarea hartii
         
         //transmitere date catre algoritm
-        List<Utilitary.Tara> tari_alese = new List<Utilitary.Tara>(); //lista tarilor alese si vecinii acestora
+        List<Utility.Tara> tari_alese = new List<Utility.Tara>(); //lista tarilor alese si vecinii acestora
         List<string> culori_alese = new List<string>(); //lista culorilor alese
 
-        List<Utilitary.err> err_message = new List<Utilitary.err>(); //mesaje de eroare
-        List<Utilitary.language> language_texts = new List<Utilitary.language>(); //text afisat (in functie de limba aleasa)
+        List<Utility.err> err_message = new List<Utility.err>(); //mesaje de eroare
+        List<Utility.language> language_texts = new List<Utility.language>(); //text afisat (in functie de limba aleasa)
 
 
         int NrCulori = 0;
@@ -61,14 +61,13 @@ namespace ProiectSincretic
             checkBox_AfisareHarta_B1.Checked = true;
 
             //adaugare tari in comboBox
-            ut.LoadComboBox(language, states_filename, comboBox_Tari_B1);
+            ut.LoadComboBox(language, states_filename, comboBox_Tari_B1, tari);
 
             //adaugare culori in comboBox
-            ut.LoadComboBox(language, colours_filename, comboBox_Culori_B1);
-            
+            ut.LoadComboBox(language, colours_filename, comboBox_Culori_B1, null);
 
-            comboBox_Tari_B1.Items.AddRange(tari.ToArray());
-            comboBox_Culori_B1.Items.AddRange(culori.ToArray());
+            //comboBox_Tari_B1.Items.AddRange(tari.ToArray());
+            //comboBox_Culori_B1.Items.AddRange(culori.ToArray());
 
             //aplicare preferinte
             //traduceri
@@ -198,25 +197,32 @@ namespace ProiectSincretic
         //preluarea numelor culorilor (optional)
         private void textBox_Culori_B1_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button_GenerareHarta_Click(object sender, EventArgs e)
         {
-            //#TO CHANGE WHEN NEXT FORM IS READY TO BE IMPLEMENTED#
-            /*dev: constructor call to next form to be implemented here*/   //transmitere date catre algoritmul de generare a hartii
-            
-            foreach(object item in listBox_ListaCulori_B1.Items)
+            bool err = false;
+
+            foreach (object item in listBox_ListaCulori_B1.Items)
                 culori_alese.Add(item.ToString());
 
+            if (!ut.MinCuloriOk(tari_alese, culori_alese.Count))
+            {
+                if (language == "RO") errorProvider_GenerareHartaTastatura.SetError(listBox_ListaCulori_B1, "Număr insuficient de culori alese");
+                else if (language == "EN") errorProvider_GenerareHartaTastatura.SetError(listBox_ListaCulori_B1, "Too few colours chosen");
+                err = true;
+            }
+            else {
+                //apelul functiei care implementeaza algoritmul
+                ut.Algorithm(tari_alese, culori_alese);
+            }
 
-            //apelul functiei care implementeaza algoritmul
-            ut.Algorithm(tari_alese, culori_alese);
-
-            
-            this.Visible = false;
-            this.Close(); //inchidere form ; dev: to delete or change to transition to next form ('afisare harta' probably)
-        
+            if (err == false)
+            {
+                this.Visible = false;
+                this.Close(); //inchidere form ; dev: to delete or change to transition to next form ('afisare harta' probably)
+            }
             
         
         }
@@ -255,8 +261,12 @@ namespace ProiectSincretic
         private void button_AdaugareCuloare_B1_Click(object sender, EventArgs e)
         {
             colorDialog_B1.AllowFullOpen=true;
-            colorDialog_B1.ShowDialog();
-            listBox_ListaCulori_B1.Items.Add(colorDialog_B1.Color);
+            DialogResult rez = colorDialog_B1.ShowDialog();
+            if (rez == DialogResult.OK)
+            {
+                listBox_ListaCulori_B1.Items.Add(colorDialog_B1.Color);
+                textBox_NrCulori_B1.Text = listBox_ListaCulori_B1.Items.Count.ToString();
+            }
         }
 
         private void listBox_ListaTari_B1_SelectedIndexChanged(object sender, EventArgs e)
@@ -268,7 +278,10 @@ namespace ProiectSincretic
         private void comboBox_Culori_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!listBox_ListaCulori_B1.Items.Contains(comboBox_Culori_B1.SelectedItem.ToString()))
+            {
                 listBox_ListaCulori_B1.Items.Add(comboBox_Culori_B1.SelectedItem.ToString());
+                textBox_NrCulori_B1.Text = listBox_ListaCulori_B1.Items.Count.ToString();
+            }
         }
 
     }

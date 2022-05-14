@@ -52,8 +52,10 @@
             this.checkBox_AfisareHarta_B1 = new System.Windows.Forms.CheckBox();
             this.colorDialog_B1 = new System.Windows.Forms.ColorDialog();
             this.toolTip_Tara_ListaVecini_B1 = new System.Windows.Forms.ToolTip(this.components);
+            this.errorProvider_GenerareHartaTastatura = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox_IntroducereDate_B1.SuspendLayout();
             this.groupBox_DateOptionale_B1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_GenerareHartaTastatura)).BeginInit();
             this.SuspendLayout();
             // 
             // label_Titlu
@@ -102,6 +104,7 @@
             // 
             // textBox_NrCulori_B1
             // 
+            this.textBox_NrCulori_B1.Enabled = false;
             this.textBox_NrCulori_B1.Location = new System.Drawing.Point(207, 66);
             this.textBox_NrCulori_B1.Name = "textBox_NrCulori_B1";
             this.textBox_NrCulori_B1.Size = new System.Drawing.Size(125, 25);
@@ -161,7 +164,7 @@
             this.groupBox_DateOptionale_B1.Size = new System.Drawing.Size(324, 160);
             this.groupBox_DateOptionale_B1.TabIndex = 9;
             this.groupBox_DateOptionale_B1.TabStop = false;
-            this.groupBox_DateOptionale_B1.Text = "Opțional";
+            this.groupBox_DateOptionale_B1.Text = "Date țări";
             // 
             // label_AdaugareCuloare_B1
             // 
@@ -276,6 +279,10 @@
             this.checkBox_AfisareHarta_B1.UseVisualStyleBackColor = true;
             this.checkBox_AfisareHarta_B1.CheckedChanged += new System.EventHandler(this.checkBox_AfisareHarta_CheckedChanged);
             // 
+            // errorProvider_GenerareHartaTastatura
+            // 
+            this.errorProvider_GenerareHartaTastatura.ContainerControl = this;
+            // 
             // Generare_harta_tastatura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -300,6 +307,7 @@
             this.groupBox_IntroducereDate_B1.PerformLayout();
             this.groupBox_DateOptionale_B1.ResumeLayout(false);
             this.groupBox_DateOptionale_B1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_GenerareHartaTastatura)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,5 +338,6 @@
         private Button button_AdaugareCuloare_B1;
         private ToolTip toolTip_Tara_ListaVecini_B1;
         private Label label_Note_B1;
+        private ErrorProvider errorProvider_GenerareHartaTastatura;
     }
 }

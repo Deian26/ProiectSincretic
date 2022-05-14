@@ -8,7 +8,7 @@ using System.Xml;
 namespace Main
 {
 
-    public class Utilitary //clasa care defineste structuri de date si functii utilitare
+    public class Utility //clasa care defineste structuri de date si functii utilitare
     {
         //structuri de date
         public struct err
@@ -127,12 +127,12 @@ namespace Main
         public List<FileSave> Algorithm(List<Tara> Tari, List<string> culori)
         {
             List<FileSave> result = new List<FileSave>();
-            static bool verif(int i, List<FileSave> result, string Nume)
+            bool verif(int i, List<FileSave> result, string Nume)
             {
                 int ok = -1;
                 for (int j = 0; j < result[i].getVecini().Count; j++)
                 {
-                    if (result[i].getVecini(j) == Nume)
+                    if (result[i].getVecini()[j] == Nume)
                         ok = j;
                 }
                 if (ok != -1)
@@ -141,7 +141,7 @@ namespace Main
                 }
                 return false;
             }
-            static void setTara(List<FileSave> result, Tara tara, List<string> cul)
+            void setTara(List<FileSave> result, Tara tara, List<string> cul)
             {
                 int k = result.Count;
                 int i;
@@ -162,7 +162,7 @@ namespace Main
                     for (i = 0; i < k; i++)
                         if (verif(i, result, tara.getTara()) == true)
                         {
-                            index = cul.IndexOf(result[i].Culoare);
+                            index = cul.IndexOf(result[i].getCuloare());
                             seen[index] = true;
                             if (index > indexm)
                                 indexm = index;
@@ -190,7 +190,7 @@ namespace Main
                 }
 
             }
-            static void citireDate()
+            void citireDate()
             {
                 foreach (var tara in Tari)
                 {
@@ -238,7 +238,7 @@ namespace Main
             list.Load(err_filename);
             foreach (XmlNode node in list.DocumentElement.ChildNodes)
                 foreach (XmlNode node2 in node.ChildNodes)
-                    err_message.Add(new Utilitary.err(node2.Name, node2.InnerText));
+                    err_message.Add(new Utility.err(node2.Name, node2.InnerText));
 
         }
 
@@ -273,7 +273,7 @@ namespace Main
         public void RewriteTexts(List<language> language_texts, Form form)
         {
             if (language_texts.Count != 0) form.Text = language_texts[0].getText();
-            foreach (Utilitary.language language in language_texts)
+            foreach (Utility.language language in language_texts)
             {
                 if (language.getName() != "")
                 {
@@ -380,9 +380,28 @@ namespace Main
 
         }
 
+        //verificare numar minim de culori
+        public bool MinCuloriOk(List<Utility.Tara> tari_alese, int culori_alese_count)
+        {
+            int i, j,k,nr=9999, min = 9999;
+
+            for (i = 0; i < tari_alese.Count; i++)
+            {
+                for (nr = 0, j = 0; j < tari_alese[i].getVecini().Count; j++)
+                {
+                    for (k = 0; k < tari_alese[i].getVecini().Count; k++)
+                        if(tari_alese[i].getVecini()[j].Equals(tari_alese[i].getVecini()[k])) nr++;
+                    if (nr < min) min = nr;
+                }
+            }
+
+            if (culori_alese_count >= nr) return true;
+
+            return false;
+        }
 
         //incarcare tari si culori in comboBox-urile corespondente
-        public void LoadComboBox(string language, string filename, ComboBox combo)
+        public void LoadComboBox(string language, string filename, ComboBox combo, List<string> tari)
         {
             XmlDocument xml = new XmlDocument();
             xml.Load(filename);
@@ -390,8 +409,10 @@ namespace Main
             foreach (XmlNode node in xml.DocumentElement.ChildNodes)
                 if (node.Name == language)
                     foreach (XmlNode node2 in node.ChildNodes)
+                    {
                         combo.Items.Add(node2.InnerText);
-
+                        if(tari!=null) tari.Add(node2.InnerText);
+                    }
         }
 
     }

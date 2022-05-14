@@ -16,8 +16,8 @@ namespace ProiectSincretic
     {
         string savefile_path = "..//..//..//Fisiere//RecentMaps.xml";
         string language, theme, languages_filename, themes_filename,err_filename;
-        List<Utilitary.err> err_messages = new List<Utilitary.err>();
-        List<Utilitary.language> language_texts= new List<Utilitary.language>();
+        List<Utility.err> err_messages = new List<Utility.err>();
+        List<Utility.language> language_texts= new List<Utility.language>();
         bool ERR = false;
         public Harti_recente(string language, string theme, string languages_filename, string themes_filename, string err_filename, Point location)
         {
@@ -35,7 +35,7 @@ namespace ProiectSincretic
 
         private void Harti_recente_Load(object sender, EventArgs e)
         {
-            Utilitary ut = new Utilitary();
+            Utility ut = new Utility();
             this.FormClosing += Harti_recente_FormClosing;
             //locatie form
             this.Location = new Point(150, 150);
