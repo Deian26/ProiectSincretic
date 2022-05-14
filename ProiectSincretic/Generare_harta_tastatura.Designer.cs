@@ -32,7 +32,6 @@
             this.label_Titlu = new System.Windows.Forms.Label();
             this.label_NrTari_B1 = new System.Windows.Forms.Label();
             this.groupBox_IntroducereDate_B1 = new System.Windows.Forms.GroupBox();
-            this.label_Note_B1 = new System.Windows.Forms.Label();
             this.textBox_NrCulori_B1 = new System.Windows.Forms.TextBox();
             this.label_NrCulori_B1 = new System.Windows.Forms.Label();
             this.textBox_NrTari_B1 = new System.Windows.Forms.TextBox();
@@ -49,7 +48,6 @@
             this.label_ListaTariListBox_B1 = new System.Windows.Forms.Label();
             this.label_ListaCuloriListBox_B1 = new System.Windows.Forms.Label();
             this.button_Iesire = new System.Windows.Forms.Button();
-            this.checkBox_AfisareHarta_B1 = new System.Windows.Forms.CheckBox();
             this.colorDialog_B1 = new System.Windows.Forms.ColorDialog();
             this.toolTip_Tara_ListaVecini_B1 = new System.Windows.Forms.ToolTip(this.components);
             this.errorProvider_GenerareHartaTastatura = new System.Windows.Forms.ErrorProvider(this.components);
@@ -80,7 +78,6 @@
             // 
             // groupBox_IntroducereDate_B1
             // 
-            this.groupBox_IntroducereDate_B1.Controls.Add(this.label_Note_B1);
             this.groupBox_IntroducereDate_B1.Controls.Add(this.textBox_NrCulori_B1);
             this.groupBox_IntroducereDate_B1.Controls.Add(this.label_NrCulori_B1);
             this.groupBox_IntroducereDate_B1.Controls.Add(this.textBox_NrTari_B1);
@@ -91,16 +88,6 @@
             this.groupBox_IntroducereDate_B1.TabIndex = 2;
             this.groupBox_IntroducereDate_B1.TabStop = false;
             this.groupBox_IntroducereDate_B1.Text = "Introducere date";
-            // 
-            // label_Note_B1
-            // 
-            this.label_Note_B1.AutoSize = true;
-            this.label_Note_B1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_Note_B1.Location = new System.Drawing.Point(5, 125);
-            this.label_Note_B1.Name = "label_Note_B1";
-            this.label_Note_B1.Size = new System.Drawing.Size(175, 23);
-            this.label_Note_B1.TabIndex = 7;
-            this.label_Note_B1.Text = "* - obligatoriu";
             // 
             // textBox_NrCulori_B1
             // 
@@ -123,6 +110,7 @@
             // 
             // textBox_NrTari_B1
             // 
+            this.textBox_NrTari_B1.Enabled = false;
             this.textBox_NrTari_B1.Location = new System.Drawing.Point(208, 32);
             this.textBox_NrTari_B1.Name = "textBox_NrTari_B1";
             this.textBox_NrTari_B1.Size = new System.Drawing.Size(125, 25);
@@ -267,18 +255,6 @@
             this.button_Iesire.UseVisualStyleBackColor = false;
             this.button_Iesire.Click += new System.EventHandler(this.button_Iesire_Click);
             // 
-            // checkBox_AfisareHarta_B1
-            // 
-            this.checkBox_AfisareHarta_B1.AutoSize = true;
-            this.checkBox_AfisareHarta_B1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox_AfisareHarta_B1.Location = new System.Drawing.Point(17, 368);
-            this.checkBox_AfisareHarta_B1.Name = "checkBox_AfisareHarta_B1";
-            this.checkBox_AfisareHarta_B1.Size = new System.Drawing.Size(134, 22);
-            this.checkBox_AfisareHarta_B1.TabIndex = 14;
-            this.checkBox_AfisareHarta_B1.Text = "Afișare hartă";
-            this.checkBox_AfisareHarta_B1.UseVisualStyleBackColor = true;
-            this.checkBox_AfisareHarta_B1.CheckedChanged += new System.EventHandler(this.checkBox_AfisareHarta_CheckedChanged);
-            // 
             // errorProvider_GenerareHartaTastatura
             // 
             this.errorProvider_GenerareHartaTastatura.ContainerControl = this;
@@ -288,7 +264,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(715, 405);
-            this.Controls.Add(this.checkBox_AfisareHarta_B1);
             this.Controls.Add(this.button_Iesire);
             this.Controls.Add(this.label_ListaCuloriListBox_B1);
             this.Controls.Add(this.label_ListaTariListBox_B1);
@@ -328,7 +303,6 @@
         private Label label_ListaTariListBox_B1;
         private Label label_ListaCuloriListBox_B1;
         private Button button_Iesire;
-        private CheckBox checkBox_AfisareHarta_B1;
         private ComboBox comboBox_Culori_B1;
         private ComboBox comboBox_Tari_B1;
         private Label label_Culoare_B1;
@@ -337,7 +311,6 @@
         private Label label_AdaugareCuloare_B1;
         private Button button_AdaugareCuloare_B1;
         private ToolTip toolTip_Tara_ListaVecini_B1;
-        private Label label_Note_B1;
         private ErrorProvider errorProvider_GenerareHartaTastatura;
     }
 }

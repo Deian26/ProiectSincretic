@@ -58,7 +58,6 @@ namespace ProiectSincretic
             ERR2 = false;
             this.FormClosing += Generare_harta_tastatura_FormClosing;
             this.FormClosed += Generare_harta_tastatura_FormClosed;
-            checkBox_AfisareHarta_B1.Checked = true;
 
             //adaugare tari in comboBox
             ut.LoadComboBox(language, states_filename, comboBox_Tari_B1, tari);
@@ -253,6 +252,7 @@ namespace ProiectSincretic
 
                 ad.ShowDialog();
                 tari_alese.Add(ad.setData());
+                textBox_NrTari_B1.Text = tari_alese.Count.ToString();
                 ad.Dispose();
             }
         }
@@ -271,7 +271,13 @@ namespace ProiectSincretic
 
         private void listBox_ListaTari_B1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string aux = "", title = "";
 
+            for(int i=0;i<tari_alese[listBox_ListaTari_B1.SelectedIndex].getVecini().Count;i++)
+                aux += tari_alese[listBox_ListaTari_B1.SelectedIndex].getVecini()[i].ToString()+"\n";
+
+            textBox_NrTari_B1.Text = tari_alese.Count.ToString();
+            MessageBox.Show(aux);
         }
 
         //selectare culoare

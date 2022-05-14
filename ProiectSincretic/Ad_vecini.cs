@@ -20,6 +20,7 @@ namespace Main
             languages_filename, themes_filename, err_filename,language;
         List<Utility.language> language_texts = new List<Utility.language>();
         List<Utility.err> err_message = new List<Utility.err>();
+        bool ok = false;
 
         //constructori
         //salvare in lista comboBox-ului comboBox_ListaVecini a tarilor care pot fi selectate drept vecini pentru tara curenta
@@ -45,12 +46,21 @@ namespace Main
         //salveaza datele despre o tara si vecinii sai intr-o instanta a clasei 'Vecini'
         public Utility.Tara setData()
         {
-            Utility.Tara aux = new Utility.Tara();
+            if (ok == true)
+            {
+                Utility.Tara aux = new Utility.Tara();
+                List<string> vec = new List<string>();
 
-            aux.setTara(this.tara_curenta);
-            aux.setVecini(this.vecini);
+                aux.setTara(this.tara_curenta);
 
-            return aux;
+                for(int i=0;i<listBox_ListaVecini.Items.Count;i++)
+                    vec.Add(listBox_ListaVecini.Items[i].ToString());
+
+                aux.setVecini(vec);
+
+                return aux;
+            }
+            else return new Utility.Tara();
         }
 
 
@@ -58,6 +68,7 @@ namespace Main
         private void Ad_vecini_Load(object sender, EventArgs e)
         {
             Utility ut = new Utility();
+            ok = false;
             //locatie form
             this.Location = new Point(150, 150);
             //setare preferinte
@@ -76,6 +87,7 @@ namespace Main
         //ascundere form
         private void button_OK_Click(object sender, EventArgs e)
         {
+            ok = true;
             this.Hide();
         }
 
