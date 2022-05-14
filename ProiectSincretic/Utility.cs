@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Serialization;
+using System.Windows.Forms;
 
 namespace Main
 {
@@ -124,7 +126,7 @@ namespace Main
 
 
         //algoritm
-        public List<FileSave> Algorithm(List<Tara> Tari, List<string> culori)
+        public void Algorithm(List<Tara> Tari, List<string> culori)
         {
             List<FileSave> result = new List<FileSave>();
             bool verif(int i, List<FileSave> result, string Nume)
@@ -197,8 +199,7 @@ namespace Main
                     setTara(result, tara, culori);
                 }
             }
-
-            return result;
+            SaveToXML(result);
         }
 
 
@@ -415,5 +416,25 @@ namespace Main
                     }
         }
 
+        public void SaveToXML(List<FileSave> savetoxml)
+        {
+            XmlSerializer ser = new XmlSerializer(typeof(FileSave));
+            ser.savetoxml("Tari.xml", savetoxml);
+        }
+
+        public void ReadFromXML()
+        {
+            var deserialized = new XmlSerializer(typeof(List<FileSave>));
+            StringReader sr = new StringReader("Tari.xml");
+            List<FileSave> returnList = (List<FileSave>)deserialized.Deserialize(sr);
+            string aux="";
+            foreach(FileSave li in returnList)
+            {
+                aux = li.getTara() + " " + li.getCuloare() + "\n";
+               
+            }
+            MessageBox.Show(aux);
+
+        }
     }
 }
