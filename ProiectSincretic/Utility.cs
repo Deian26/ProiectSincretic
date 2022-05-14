@@ -419,7 +419,8 @@ namespace Main
         public void SaveToXML(List<FileSave> savetoxml)
         {
             XmlSerializer ser = new XmlSerializer(typeof(FileSave));
-            ser.savetoxml("Tari.xml", savetoxml);
+            TextWriter writer = new StreamWriter("Tari.xml");
+            ser.Serialize(writer, savetoxml);
         }
 
         public void ReadFromXML()
