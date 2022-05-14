@@ -11,7 +11,7 @@
 		
 		<L01 name="groupBox_Harta">Hartă</L01>
 		<L010 name="button_GenerareHartaTastatura">Generare hartă nouă</L010>
-		<L011 name="button_GenerareHartaDinFisier">Generare hartă din fișier</L011>
+		<L011 name="button_GenerareHartaDinFisier">Afișare hartă precedentă</L011>
 		<L012 name="button_IncarcareHartaRecenta">Hărți recente</L012>
 		
 		<L02 name="groupBox_Info">Informații</L02>
@@ -38,12 +38,12 @@
 		
 		<L11 name="button_Iesire">Ieșire</L11>
 		
-		<L12 name="groupBox_IntroducereDate_B1">Introducere date</L12>
-		<L120 name="label_NrTari_B1">Număr de țări*:</L120>
-		<L121 name="label_NrCulori_B1">Număr de culori*:</L121>
+		<L12 name="groupBox_IntroducereDate_B1">Date</L12>
+		<L120 name="label_NrTari_B1">Număr de țări:</L120>
+		<L121 name="label_NrCulori_B1">Număr de culori:</L121>
 		<L122 name="label_Note_B1">* - obligatoriu</L122>
 		
-		<L13 name="groupBox_DateOptionale">Opțional</L13>
+		<L13 name="groupBox_DateOptionale">Selectare țări și culori</L13>
 		<L130 name="label_Tara">Țară: </L130>
 		<L132 name="label_Culoare_B1">Culoare: </L132>
 		
@@ -65,7 +65,7 @@
 		
 		<L01 name="groupBox_Harta">Generate map</L01>
 		<L010 name="button_GenerareHartaTastatura">New map</L010>
-		<L011 name="button_GenerareHartaDinFisier">New map from file</L011>
+		<L011 name="button_GenerareHartaDinFisier">Load last map</L011>
 		<L012 name="button_IncarcareHartaRecenta">Recent maps</L012>
 		
 		<L02 name="groupBox_Info">About</L02>
@@ -93,12 +93,12 @@
 		
 		<L11 name="button_Iesire">Exit</L11>
 		
-		<L12 name="groupBox_IntroducereDate_B1">Enter data</L12>
-		<L120 name="label_NrTari_B1">No. of states*:</L120>
-		<L121 name="label_NrCulori_B1">No. of colours*:</L121>
+		<L12 name="groupBox_IntroducereDate_B1">Data</L12>
+		<L120 name="label_NrTari_B1">No. of states:</L120>
+		<L121 name="label_NrCulori_B1">No. of colours:</L121>
 		<L122 name="label_Note_B1">* - mandatory</L122>
 		
-		<L13 name="groupBox_DateOptionale_B1">Optional</L13>
+		<L13 name="groupBox_DateOptionale_B1">Select states and colours</L13>
 		<L130 name="label_Tara_B1">State: </L130>
 		<L132 name="label_Culoare_B1">Colour: </L132>
 		<L133 name="label_AdaugareCuloare_B1">New colour</L133>

@@ -58,12 +58,12 @@ namespace ProiectSincretic
         string themes_filename = "..//..//..//Fisiere//Themes.xml";//cale fisier Themes.xml
         string states_filename = "..//..//..//Fisiere//States.xml";//cale fisier States.xml
         string colours_filename = "..//..//..//Fisiere//Colours.xml";//cale fisier Colours.xml
-        
+        Utility ut = new Utility();
 
         //load form
         private void Meniu_principal_Load(object sender, EventArgs e)
         {
-            Utility ut = new Utility();
+            
 
             //locatie form
             this.Location = new Point(150, 150);
@@ -181,7 +181,7 @@ namespace ProiectSincretic
 
         private void button_GenerareHartaDinFisier_Click(object sender, EventArgs e)
         {
-            saveFileDialog1.ShowDialog();
+            ut.ReadFromXML();
         }
 
         //actiuni asociate butonului de generare harta noua de la tastatura (B1)

@@ -388,6 +388,7 @@ namespace Main
 
             for (i = 0; i < tari_alese.Count; i++)
             {
+                if(tari_alese[i].getVecini()!=null)
                 for (nr = 0, j = 0; j < tari_alese[i].getVecini().Count; j++)
                 {
                     for (k = 0; k < tari_alese[i].getVecini().Count; k++)

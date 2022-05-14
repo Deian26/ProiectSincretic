@@ -31,7 +31,6 @@
             this.ContentPanel = new System.Windows.Forms.ToolStripContentPanel();
             this.label_Titlu = new System.Windows.Forms.Label();
             this.groupBox_Harta = new System.Windows.Forms.GroupBox();
-            this.button_IncarcareHartaRecenta = new System.Windows.Forms.Button();
             this.button_GenerareHartaDinFisier = new System.Windows.Forms.Button();
             this.button_GenerareHartaTastatura = new System.Windows.Forms.Button();
             this.groupBox_Info = new System.Windows.Forms.GroupBox();
@@ -95,19 +94,11 @@
             // 
             // groupBox_Harta
             // 
-            this.groupBox_Harta.Controls.Add(this.button_IncarcareHartaRecenta);
             this.groupBox_Harta.Controls.Add(this.button_GenerareHartaDinFisier);
             this.groupBox_Harta.Controls.Add(this.button_GenerareHartaTastatura);
             resources.ApplyResources(this.groupBox_Harta, "groupBox_Harta");
             this.groupBox_Harta.Name = "groupBox_Harta";
             this.groupBox_Harta.TabStop = false;
-            // 
-            // button_IncarcareHartaRecenta
-            // 
-            resources.ApplyResources(this.button_IncarcareHartaRecenta, "button_IncarcareHartaRecenta");
-            this.button_IncarcareHartaRecenta.Name = "button_IncarcareHartaRecenta";
-            this.button_IncarcareHartaRecenta.UseVisualStyleBackColor = true;
-            this.button_IncarcareHartaRecenta.Click += new System.EventHandler(this.button_IncarcareHartaRecenta_Click);
             // 
             // button_GenerareHartaDinFisier
             // 
@@ -257,7 +248,6 @@
         private ToolStripContentPanel ContentPanel;
         private Label label_Titlu;
         private GroupBox groupBox_Harta;
-        private Button button_IncarcareHartaRecenta;
         private Button button_GenerareHartaDinFisier;
         private Button button_GenerareHartaTastatura;
         private GroupBox groupBox_Info;
