@@ -60,6 +60,14 @@ namespace Main
             }
         };
 
+        //structura care se salveaza in fisier XML
+
+        public struct SaveTara
+        {
+            public string savetara;
+            public string saveculoare;
+        }
+
         //structura care memoreaza tara curenta si vecinii sai
         public struct Tara
         {
@@ -129,6 +137,7 @@ namespace Main
         public void Algorithm(List<Tara> Tari, List<string> culori)
         {
             List<FileSave> result = new List<FileSave>();
+            List<SaveTara> save = new List<SaveTara>();
             bool verif(int i, List<FileSave> result, string Nume)
             {
                 int ok = -1;
@@ -176,7 +185,7 @@ namespace Main
                             ok = true;
                             FileSave t = new FileSave();
                             t.setTara(tara.getTara());
-                            t.setCuloare(cul[index]);
+                            t.setCuloare(cul[i]);
                             t.setVecini(tara.getVecini());
                             result.Add(t);
                             break;
@@ -185,21 +194,33 @@ namespace Main
                     {
                         FileSave t = new FileSave();
                         t.setTara(tara.getTara());
-                        t.setCuloare(cul[index]);
+                        t.setCuloare(cul[indexm+1]);
                         t.setVecini(tara.getVecini());
                         result.Add(t);
                     }
                 }
 
             }
-            void citireDate()
+            void Finalizare()
             {
+                string aux = "";
+                SaveTara saveTara = new SaveTara();
+                foreach (FileSave t in result)
+                {
+                    saveTara.savetara = t.getTara();
+                    saveTara.saveculoare = t.getCuloare();
+                    save.Add(saveTara);
+                }
+                
+                SaveToXML(save);
+
+                
+            }
                 foreach (var tara in Tari)
                 {
                     setTara(result, tara, culori);
                 }
-            }
-            SaveToXML(result);
+            Finalizare();
         }
 
 
@@ -420,25 +441,42 @@ namespace Main
                     }
         }
 
-        public void SaveToXML(List<FileSave> savetoxml)
+        public void SaveToXML(List<SaveTara> savetoxml)
         {
-            XmlSerializer ser = new XmlSerializer(typeof(FileSave));
-            TextWriter writer = new StreamWriter("Tari.xml");
-            ser.Serialize(writer, savetoxml);
+            SaveTara t = new SaveTara();
+            t.savetara="***********";
+            t.saveculoare="**************";
+            savetoxml.Add(t);
+            XmlSerializer deserialized = new XmlSerializer(typeof(List<SaveTara>));
+            if (File.Exists(@"E:\VisualStudio2022\New folder (5)\ProiectSincretic\XML.xml"))
+            {
+                string aux = "";
+                FileStream sr = new FileStream(@"E:\VisualStudio2022\New folder (5)\ProiectSincretic\XML.xml", FileMode.Open);
+                List<SaveTara> List = (List<SaveTara>)deserialized.Deserialize(sr);
+                sr.Close();
+                savetoxml.AddRange(List);
+            }
+            XmlSerializer ser = new XmlSerializer(typeof(List<SaveTara>));
+            using (var writer = new StreamWriter(@"E:\VisualStudio2022\New folder (5)\ProiectSincretic\XML.xml"))
+            {
+                ser.Serialize(writer, savetoxml);
+            }
         }
 
         public void ReadFromXML()
         {
-            var deserialized = new XmlSerializer(typeof(List<FileSave>));
-            StringReader sr = new StringReader("Tari.xml");
-            List<FileSave> returnList = (List<FileSave>)deserialized.Deserialize(sr);
-            string aux="";
-            foreach(FileSave li in returnList)
+            XmlSerializer deserialized = new XmlSerializer(typeof(List<SaveTara>));
+            string aux = "";
+            FileStream sr = new FileStream(@"E:\VisualStudio2022\New folder (5)\ProiectSincretic\XML.xml", FileMode.Open);
+            List<SaveTara> List = (List<SaveTara>)deserialized.Deserialize(sr);
+            foreach (SaveTara item in List)
             {
-                aux = li.getTara() + " " + li.getCuloare() + "\n";
-               
+                aux = aux + item.savetara + " " + item.saveculoare + "\n";
+
+
             }
             MessageBox.Show(aux);
+            sr.Close();
 
         }
     }

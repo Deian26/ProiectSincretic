@@ -8,25 +8,23 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\deian\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\alini\\.nuget\\packages\\": {},
+    "E:\\VSCache\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\deian\\Source\\Repos\\Deian26\\ProiectSincretic\\ProiectSincretic\\Main.csproj",
+      "projectUniqueName": "E:\\VisualStudio2022\\New folder (5)\\ProiectSincretic\\Main.csproj",
       "projectName": "Main",
-      "projectPath": "C:\\Users\\deian\\Source\\Repos\\Deian26\\ProiectSincretic\\ProiectSincretic\\Main.csproj",
-      "packagesPath": "C:\\Users\\deian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\deian\\Source\\Repos\\Deian26\\ProiectSincretic\\ProiectSincretic\\obj\\",
+      "projectPath": "E:\\VisualStudio2022\\New folder (5)\\ProiectSincretic\\Main.csproj",
+      "packagesPath": "C:\\Users\\alini\\.nuget\\packages\\",
+      "outputPath": "E:\\VisualStudio2022\\New folder (5)\\ProiectSincretic\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "E:\\VSCache\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\deian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\alini\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

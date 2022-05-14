@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\deian\\Source\\Repos\\Deian26\\ProiectSincretic\\Generator_fisiere\\Generator_fisiere.csproj": {}
+    "E:\\VisualStudio2022\\New folder (5)\\Generator_fisiere\\Generator_fisiere.csproj": {}
   },
   "projects": {
-    "C:\\Users\\deian\\Source\\Repos\\Deian26\\ProiectSincretic\\Generator_fisiere\\Generator_fisiere.csproj": {
+    "E:\\VisualStudio2022\\New folder (5)\\Generator_fisiere\\Generator_fisiere.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\deian\\Source\\Repos\\Deian26\\ProiectSincretic\\Generator_fisiere\\Generator_fisiere.csproj",
+        "projectUniqueName": "E:\\VisualStudio2022\\New folder (5)\\Generator_fisiere\\Generator_fisiere.csproj",
         "projectName": "Generator_fisiere",
-        "projectPath": "C:\\Users\\deian\\Source\\Repos\\Deian26\\ProiectSincretic\\Generator_fisiere\\Generator_fisiere.csproj",
-        "packagesPath": "C:\\Users\\deian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\deian\\Source\\Repos\\Deian26\\ProiectSincretic\\Generator_fisiere\\obj\\",
+        "projectPath": "E:\\VisualStudio2022\\New folder (5)\\Generator_fisiere\\Generator_fisiere.csproj",
+        "packagesPath": "C:\\Users\\alini\\.nuget\\packages\\",
+        "outputPath": "E:\\VisualStudio2022\\New folder (5)\\Generator_fisiere\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "E:\\VSCache\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\deian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\alini\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

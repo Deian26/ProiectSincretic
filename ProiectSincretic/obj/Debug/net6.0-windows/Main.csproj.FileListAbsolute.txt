@@ -18,3 +18,23 @@ C:\Users\deian\Source\Repos\Deian26\ProiectSincretic\ProiectSincretic\obj\Debug\
 C:\Users\deian\Source\Repos\Deian26\ProiectSincretic\ProiectSincretic\obj\Debug\net6.0-windows\ref\Main.dll
 C:\Users\deian\Source\Repos\Deian26\ProiectSincretic\ProiectSincretic\obj\Debug\net6.0-windows\Main.Ad_vecini.resources
 C:\Users\deian\Source\Repos\Deian26\ProiectSincretic\ProiectSincretic\obj\Debug\net6.0-windows\ProiectSincretic.Generare_harta_tastatura.resources
+E:\VisualStudio2022\New folder (5)\ProiectSincretic\bin\Debug\net6.0-windows\Main.exe
+E:\VisualStudio2022\New folder (5)\ProiectSincretic\bin\Debug\net6.0-windows\Main.deps.json
+E:\VisualStudio2022\New folder (5)\ProiectSincretic\bin\Debug\net6.0-windows\Main.runtimeconfig.json
+E:\VisualStudio2022\New folder (5)\ProiectSincretic\bin\Debug\net6.0-windows\Main.dll
+E:\VisualStudio2022\New folder (5)\ProiectSincretic\bin\Debug\net6.0-windows\Main.pdb
+E:\VisualStudio2022\New folder (5)\ProiectSincretic\obj\Debug\net6.0-windows\Main.csproj.AssemblyReference.cache
+E:\VisualStudio2022\New folder (5)\ProiectSincretic\obj\Debug\net6.0-windows\Main.Ad_vecini.resources
+E:\VisualStudio2022\New folder (5)\ProiectSincretic\obj\Debug\net6.0-windows\ProiectSincretic.Generare_harta_tastatura.resources
+E:\VisualStudio2022\New folder (5)\ProiectSincretic\obj\Debug\net6.0-windows\ProiectSincretic.Harti_recente.resources
+E:\VisualStudio2022\New folder (5)\ProiectSincretic\obj\Debug\net6.0-windows\ProiectSincretic.Meniu_principal.resources
+E:\VisualStudio2022\New folder (5)\ProiectSincretic\obj\Debug\net6.0-windows\Main.csproj.GenerateResource.cache
+E:\VisualStudio2022\New folder (5)\ProiectSincretic\obj\Debug\net6.0-windows\Main.GeneratedMSBuildEditorConfig.editorconfig
+E:\VisualStudio2022\New folder (5)\ProiectSincretic\obj\Debug\net6.0-windows\Main.AssemblyInfoInputs.cache
+E:\VisualStudio2022\New folder (5)\ProiectSincretic\obj\Debug\net6.0-windows\Main.AssemblyInfo.cs
+E:\VisualStudio2022\New folder (5)\ProiectSincretic\obj\Debug\net6.0-windows\Main.csproj.CoreCompileInputs.cache
+E:\VisualStudio2022\New folder (5)\ProiectSincretic\obj\Debug\net6.0-windows\Main.dll
+E:\VisualStudio2022\New folder (5)\ProiectSincretic\obj\Debug\net6.0-windows\refint\Main.dll
+E:\VisualStudio2022\New folder (5)\ProiectSincretic\obj\Debug\net6.0-windows\Main.pdb
+E:\VisualStudio2022\New folder (5)\ProiectSincretic\obj\Debug\net6.0-windows\Main.genruntimeconfig.cache
+E:\VisualStudio2022\New folder (5)\ProiectSincretic\obj\Debug\net6.0-windows\ref\Main.dll
