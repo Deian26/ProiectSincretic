@@ -130,9 +130,9 @@ namespace Main
             static bool verif(int i, List<FileSave> result, string Nume)
             {
                 int ok = -1;
-                for (int j = 0; j < result[i].Vecini.Count; j++)
+                for (int j = 0; j < result[i].getVecini().Count; j++)
                 {
-                    if (result[i].Vecini[j] == Nume)
+                    if (result[i].getVecini(j) == Nume)
                         ok = j;
                 }
                 if (ok != -1)
@@ -160,7 +160,7 @@ namespace Main
                 {
                     Boolean ok = false;
                     for (i = 0; i < k; i++)
-                        if (verif(i, result, tara.Nume) == true)
+                        if (verif(i, result, tara.getTara()) == true)
                         {
                             index = cul.IndexOf(result[i].Culoare);
                             seen[index] = true;
