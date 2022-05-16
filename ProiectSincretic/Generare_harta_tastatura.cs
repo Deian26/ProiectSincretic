@@ -239,10 +239,9 @@ namespace ProiectSincretic
         
         }
 
-        //true -> harta este salvata in memorie si afisata dupa generare; false -> harta este doar salvata in memorie dupa afisare
         private void checkBox_AfisareHarta_CheckedChanged(object sender, EventArgs e)
         {
-            afisare = true;
+
         }
 
         //iesire
@@ -256,6 +255,7 @@ namespace ProiectSincretic
         private void comboBox_Tari_SelectedIndexChanged(object sender, EventArgs e)
         {
             string tara_curenta;
+            List<string> aux_tari = new List<string>();
 
             if (!listBox_ListaTari_B1.Items.Contains(comboBox_Tari_B1.SelectedItem.ToString()))
             {
@@ -265,8 +265,20 @@ namespace ProiectSincretic
 
                 ad.ShowDialog();
                 tari_alese.Add(ad.setData());
-                textBox_NrTari_B1.Text = tari_alese.Count.ToString();
                 ad.Dispose();
+
+                foreach (Utility.Tara tara in tari_alese)
+                    {
+                    
+                    
+                        if (!aux_tari.Contains(tara.getTara())) aux_tari.Add(tara.getTara());
+                        
+                        if(tara.getVecini()!=null)
+                        foreach (string vecin in tara.getVecini())
+                            if (!aux_tari.Contains(vecin)) aux_tari.Add(vecin);
+                    
+                    }
+                textBox_NrTari_B1.Text = aux_tari.Count.ToString();
             }
         }
 

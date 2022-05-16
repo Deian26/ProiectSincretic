@@ -6,11 +6,63 @@
 		<s4>Germania</s4>
 		<s5>Spania</s5>
 		<s6>Italia</s6>
-		
+		<s7>Bulgaria</s7>
+		<s8>Ungaria</s8>
+		<s9>Serbia</s9>
+		<s10>Ukraine</s10>
+		<s11>Croatia</s11>
+		<s12>Cehia</s12>
+		<s13>Austria</s13>
+		<s14>Polonia</s14>
+		<s15>Franța</s15>
+		<s16>Belgia</s16>
+		<s17>Olanda</s17>
+		<s18>Regatul Unit</s18>
+		<s19>Portugalia</s19>
+		<s20>Danemarca</s20>
+		<s21>Finlanda</s21>
+		<s22>Suedia</s22>
+		<s23>Liechtenstein</s23>
+		<s24>Andorra</s24>
+		<s25>San Marino</s25>
+		<s26>Monaco</s26>
+		<s27>Vatican</s27>
+		<s28>Elveția</s28>
+		<s29>Lituania</s29>
+		<s30>Letonia</s30>
+		<s31>Estonia</s31>
 	</RO>
 	<EN>
 		<s1>Romania</s1>
 		<s2>Republic of Moldova</s2>
 		<s3>Germany</s3>
+		<s5>Spain</s5>
+		<s6>Italy</s6>
+		<s7>Bulgaria</s7>
+		<s8>Hungary</s8>
+		<s9>Serbia</s9>
+		<s10>Ukraine</s10>
+		<s11>Croatia</s11>
+		<s12>Czech Republic</s12>
+		<s13>Austria</s13>
+		<s14>Poland</s14>
+		<s15>France</s15>
+		<s16>Belgium</s16>
+		<s17>The Netherlands</s17>
+		<s18>The United Kingdom</s18>
+		<s19>Portugal</s19>
+		<s20>Denmark</s20>
+		<s21>Finland</s21>
+		<s22>Sweden</s22>
+		<s23>Liechtenstein</s23>
+		<s24>Andorra</s24>
+		<s25>San Marino</s25>
+		<s26>Monaco</s26>
+		<s27>Vatican</s27>
+		<s28>Switzerland</s28>
+		<s29>Lithuania</s29>
+		<s30>Letonia</s30>
+		<s31>Estonia</s31>
+	
 	</EN>
 </States>

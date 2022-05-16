@@ -138,13 +138,19 @@ namespace Main
         {
             List<FileSave> result = new List<FileSave>();
             List<SaveTara> save = new List<SaveTara>();
-            bool verif(int i, List<FileSave> result, string Nume)
+            bool verif(int i, List<FileSave> result, Tara tara)
             {
                 int ok = -1;
                 for (int j = 0; j < result[i].getVecini().Count; j++)
                 {
-                    if (result[i].getVecini()[j] == Nume)
+                    if (result[i].getVecini()[j].Equals(tara.getTara()))
                         ok = j;
+                    else
+                    {
+                        foreach (string vec in tara.getVecini())
+                            if (vec.Equals(result[i].getTara()))
+                                ok = j;
+                    }
                 }
                 if (ok != -1)
                 {
@@ -171,7 +177,7 @@ namespace Main
                 {
                     Boolean ok = false;
                     for (i = 0; i < k; i++)
-                        if (verif(i, result, tara.getTara()) == true)
+                        if (verif(i, result, tara) == true)
                         {
                             index = cul.IndexOf(result[i].getCuloare());
                             seen[index] = true;
@@ -207,19 +213,23 @@ namespace Main
                 SaveTara saveTara = new SaveTara();
                 foreach (FileSave t in result)
                 {
+
                     saveTara.savetara = t.getTara();
                     saveTara.saveculoare = t.getCuloare();
                     save.Add(saveTara);
+                    aux = aux + t.getTara() + " " + t.getCuloare() + "\n";
                 }
                 
                 SaveToXML(save);
+                MessageBox.Show(aux);
 
-                
             }
-                foreach (var tara in Tari)
-                {
-                    setTara(result, tara, culori);
-                }
+                 
+
+            foreach (var tara in Tari)
+            {
+                setTara(result, tara, culori);
+            }
             Finalizare();
         }
 
@@ -448,16 +458,16 @@ namespace Main
             t.saveculoare="**************";
             savetoxml.Add(t);
             XmlSerializer deserialized = new XmlSerializer(typeof(List<SaveTara>));
-            if (File.Exists(@"E:\VisualStudio2022\New folder (5)\ProiectSincretic\XML.xml"))
+            if (File.Exists("XML.xml"))
             {
                 string aux = "";
-                FileStream sr = new FileStream(@"E:\VisualStudio2022\New folder (5)\ProiectSincretic\XML.xml", FileMode.Open);
+                FileStream sr = new FileStream("XML.xml", FileMode.Open);
                 List<SaveTara> List = (List<SaveTara>)deserialized.Deserialize(sr);
                 sr.Close();
                 savetoxml.AddRange(List);
             }
             XmlSerializer ser = new XmlSerializer(typeof(List<SaveTara>));
-            using (var writer = new StreamWriter(@"E:\VisualStudio2022\New folder (5)\ProiectSincretic\XML.xml"))
+            using (var writer = new StreamWriter("XML.xml"))
             {
                 ser.Serialize(writer, savetoxml);
             }
@@ -467,7 +477,7 @@ namespace Main
         {
             XmlSerializer deserialized = new XmlSerializer(typeof(List<SaveTara>));
             string aux = "";
-            FileStream sr = new FileStream(@"E:\VisualStudio2022\New folder (5)\ProiectSincretic\XML.xml", FileMode.Open);
+            FileStream sr = new FileStream("XML.xml", FileMode.Open);
             List<SaveTara> List = (List<SaveTara>)deserialized.Deserialize(sr);
             foreach (SaveTara item in List)
             {
