@@ -3,11 +3,33 @@
 		<c1>Roșu</c1>
 		<c2>Galben</c2>
 		<c3>Albastru</c3>
+		<c4>Verde</c4>
+		<c5>Portocaliu</c5>
+		<c6>Mov</c6>
+		<c7>Magenta</c7>
+		<c8>Gri</c8>
+		<c9>Maro</c9>
+		<c10>Alb</c10>
+		<c11>Negru</c11>
+		<c12>Indigo</c12>
+		<c13>Roz</c13>
+		<c14>Albastru închis</c14>
 	</RO>
 	
 	<EN>
 		<c1>Red</c1>
 		<c2>Yellow</c2>
 		<c3>Blue</c3>
+		<c4>Green</c4>
+		<c5>Orange</c5>
+		<c6>Purple</c6>
+		<c7>Magenta</c7>
+		<c8>Grey</c8>
+		<c9>Brown</c9>
+		<c10>White</c10>
+		<c11>Black</c11>
+		<c12>Indigo</c12>
+		<c13>Pink</c13>
+		<c14>Dark blue</c14>
 	</EN>
 </Colours>

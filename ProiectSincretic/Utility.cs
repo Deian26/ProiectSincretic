@@ -60,8 +60,9 @@ namespace Main
             }
         };
 
+        //structura realizata de catre IONESCU Alin Ioan Robert
         //structura care se salveaza in fisier XML
-
+        
         public struct SaveTara
         {
             public string savetara;
@@ -132,7 +133,7 @@ namespace Main
             }
         };
 
-
+        //algoritm realizat de catre IONESCU Alin Ioan Robert
         //algoritm
         public void Algorithm(List<Tara> Tari, List<string> culori)
         {
@@ -451,6 +452,7 @@ namespace Main
                     }
         }
 
+        //functie realizata de catre IONESCU Alin Ioan Robert
         public void SaveToXML(List<SaveTara> savetoxml)
         {
             SaveTara t = new SaveTara();
@@ -472,7 +474,7 @@ namespace Main
                 ser.Serialize(writer, savetoxml);
             }
         }
-
+        //functie realizata de catre IONESCU Alin Ioan Robert
         public void ReadFromXML()
         {
             XmlSerializer deserialized = new XmlSerializer(typeof(List<SaveTara>));
